@@ -1,0 +1,40 @@
+<section class="sr-section border-b border-[var(--sr-border)]">
+  <div class="sr-container grid gap-12 xl:grid-cols-[0.7fr_1.3fr] xl:items-start">
+    <div class="space-y-6 xl:sticky xl:top-28" srReveal srRevealFrom="left">
+      <app-section-heading
+        eyebrow="Die Lernreise"
+        title="Wie aus Orientierung konkrete berufliche Relevanz wird"
+        intro="Stay Relevant Academy ist nicht nur ein Kurskatalog. Die Programme folgen einer klaren Dramaturgie von Einordnung, Anwendung und Transfer."
+      />
+
+      <p class="max-w-[30rem] text-sm leading-7 text-[var(--sr-text-muted)]">
+        Gute Weiterbildung endet nicht bei Inhalten. Entscheidend ist, ob daraus bessere
+        Routinen, klarere Entscheidungen und neue Anschlussfähigkeit im Arbeitsalltag entstehen.
+      </p>
+    </div>
+
+    <div class="relative border-t border-[var(--sr-border)] xl:border-t-0 xl:border-l xl:pl-10">
+      @for (step of steps(); track step.step; let index = $index) {
+        <article
+          srReveal
+          [srRevealDelay]="index * 80"
+          class="relative border-b border-[var(--sr-border)] py-7 lg:grid lg:grid-cols-[5rem_1fr] lg:gap-8"
+        >
+          <div class="relative lg:-left-[3.45rem]">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full border-2 border-[var(--sr-border)] bg-white text-base font-semibold text-[var(--sr-text-muted)] shadow-[0_10px_24px_rgba(9,23,47,0.05)]">
+              {{ step.step }}
+            </div>
+          </div>
+          <div class="mt-5 lg:mt-0">
+            <h3 class="text-[1.5rem] font-semibold tracking-[-0.04em] text-[var(--sr-heading)]">
+              {{ step.title }}
+            </h3>
+            <p class="mt-4 max-w-[42rem] text-sm leading-7 text-[var(--sr-text-muted)]">
+              {{ step.text }}
+            </p>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

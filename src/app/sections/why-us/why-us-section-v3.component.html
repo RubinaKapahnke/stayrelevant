@@ -1,0 +1,62 @@
+<section id="academy" class="sr-section border-y border-[var(--sr-border)] bg-white/72">
+  <div class="sr-container space-y-14">
+    <div class="grid gap-12 xl:grid-cols-[0.72fr_1.28fr] xl:items-start">
+      <div class="space-y-6" srReveal srRevealFrom="left">
+        <app-section-heading
+          eyebrow="Wobei wir helfen"
+          title="Für Unternehmen ist das Problem selten nur fehlende Schulung."
+          intro="Häufig gibt es bereits Tools, Initiativen und einzelne Trainings. Was fehlt, ist Klarheit darüber, welche Kompetenzen wirklich gebraucht werden, wo KI sinnvoll angesetzt wird und wie Rollen, Führung und Zusammenarbeit nachziehen müssen."
+        />
+      </div>
+
+      <div class="grid gap-10 md:grid-cols-3" srReveal srRevealFrom="right" srRevealDelay="120ms">
+        @for (step of methodologySteps; track step.step; let index = $index) {
+          <article srReveal [srRevealDelay]="index * 80">
+            <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[var(--sr-heading)] text-sm font-semibold text-[var(--sr-heading)]">
+              {{ step.step }}
+            </div>
+            <h3 class="mt-6 text-xl font-semibold tracking-[-0.04em] text-[var(--sr-heading)]">
+              {{ step.title }}
+            </h3>
+            <p class="mt-4 text-sm leading-7 text-[var(--sr-text-muted)]">{{ step.text }}</p>
+          </article>
+        }
+      </div>
+    </div>
+
+    <div class="grid gap-12 xl:grid-cols-[0.76fr_1.24fr] xl:items-start">
+      <div
+        srReveal
+        srRevealFrom="left"
+        class="border-t border-[var(--sr-border)] pt-6"
+      >
+        <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+          Warum Beratung dazugehört
+        </p>
+        <p class="mt-5 max-w-[34rem] text-lg leading-8 text-[var(--sr-heading)]">
+          In vielen Organisationen ist Lernen nur ein Teil des Problems. Oft müssen zuerst Ausgangslage, Prioritäten und sinnvolle Formate geklärt werden.
+        </p>
+        <p class="mt-5 max-w-[34rem] text-base leading-8 text-[var(--sr-text-muted)]">
+          Deshalb bieten wir neben Schulung auch Standortbestimmung, Sparring und die gemeinsame Entwicklung von Lern- und Umsetzungslogik an. Nicht jedes Problem braucht sofort ein Trainingsprogramm. Manches braucht erst Orientierung.
+        </p>
+      </div>
+
+      <div class="border-t border-[var(--sr-border)]" srReveal srRevealFrom="right" srRevealDelay="120ms">
+        @for (item of differentiators(); track item.title; let index = $index) {
+          <article
+            class="grid gap-4 border-b border-[var(--sr-border)] py-6 lg:grid-cols-[15rem_1fr] lg:gap-8"
+            srReveal
+            [srRevealDelay]="index * 80"
+          >
+            <h3 class="text-xl font-semibold tracking-[-0.04em] text-[var(--sr-heading)]">
+              {{ item.title }}
+            </h3>
+            <p class="max-w-[36rem] text-base leading-7 text-[var(--sr-text-muted)]">
+              {{ item.text }}
+            </p>
+          </article>
+        }
+      </div>
+    </div>
+  </div>
+</section>

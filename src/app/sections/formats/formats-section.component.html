@@ -1,0 +1,50 @@
+<section id="angebote" class="sr-section">
+  <div class="sr-container space-y-10">
+    <div class="grid gap-8 lg:grid-cols-[1fr_0.86fr] xl:gap-14">
+      <app-section-heading
+        eyebrow="Lernformate und Angebote"
+        title="Nicht ein Katalog von Kursen, sondern Formate mit klarer Funktion"
+        intro="Je nach Zielgruppe und Reifegrad braucht Lernen unterschiedliche Tiefe. Deshalb denkt Stay Relevant Academy nicht in Standardpaketen, sondern in sinnvollen Formaten."
+      />
+
+      <div class="sr-panel rounded-[1.75rem] p-6 sm:p-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+          Formatprinzip
+        </p>
+        <p class="sr-balance mt-4 text-2xl font-semibold tracking-[-0.04em] text-[var(--sr-heading)]">
+          So viel Struktur wie nötig, so viel Praxisbezug wie möglich.
+        </p>
+        <p class="mt-4 text-base leading-7 text-[var(--sr-text-muted)]">
+          Formate können als Einstieg, Vertiefung oder organisationsweiter Kompetenzaufbau eingesetzt werden. Entscheidend ist, dass Lernen anschlussfähig bleibt und nicht als isoliertes Event verpufft.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+      @for (format of formats(); track format.title; let index = $index) {
+        <mat-card
+          appearance="outlined"
+          class="sr-card rounded-[1.8rem] p-6 sm:p-7"
+          [ngClass]="{ 'xl:col-span-2': index === 0 }"
+        >
+          <div class="flex items-center justify-between gap-4">
+            <h3 class="text-2xl font-semibold tracking-[-0.04em] text-[var(--sr-heading)]">
+              {{ format.title }}
+            </h3>
+            <span class="sr-chip sr-chip--green">{{ format.duration }}</span>
+          </div>
+          <p class="mt-4 text-base leading-7 text-[var(--sr-text-muted)]">{{ format.text }}</p>
+
+          <ul class="mt-6 space-y-3">
+            @for (bullet of format.bullets; track bullet) {
+              <li class="flex gap-3 text-sm leading-6 text-[var(--sr-text-muted)]">
+                <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--sr-green)]"></span>
+                <span>{{ bullet }}</span>
+              </li>
+            }
+          </ul>
+        </mat-card>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,69 @@
+<section id="angebote" class="sr-section">
+  <div class="sr-container">
+    <div class="grid gap-12 xl:grid-cols-[0.7fr_1.3fr] xl:items-start">
+      <div class="space-y-8 xl:sticky xl:top-28" srReveal srRevealFrom="left">
+        <app-section-heading
+          eyebrow="Programme, Beratung und Angebote"
+          title="Nicht alles ist ein Kurs. Manches braucht Schulung, manches Beratung, manches beides."
+          intro="Je nach Zielgruppe und Ausgangslage braucht Kompetenzaufbau unterschiedliche Formate. Deshalb arbeitet Stay Relevant Academy nicht mit Standardpaketen, sondern mit einem passenden Zuschnitt."
+        />
+
+        <div class="border-t border-[var(--sr-border)] pt-6">
+          <p class="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-[var(--sr-text-muted)]">
+            Formatprinzip
+          </p>
+          <p class="mt-4 max-w-[28rem] text-lg leading-7 text-[var(--sr-heading)]">
+            Erst klären, was das Problem ist. Dann das passende Format wählen.
+          </p>
+          <p class="mt-4 max-w-[28rem] text-sm leading-6 text-[var(--sr-text-muted)]">
+            Die Formate lassen sich einzeln nutzen oder zu einer größeren Lern- und Beratungsarchitektur verbinden.
+          </p>
+        </div>
+      </div>
+
+      <mat-accordion class="space-y-1 border-t border-[var(--sr-border)]" srReveal srRevealFrom="right" srRevealDelay="120ms">
+        @for (format of formats(); track format.title; let index = $index) {
+          <mat-expansion-panel
+            class="sr-expansion"
+            [expanded]="index === 0"
+            srReveal
+            [srRevealDelay]="index * 70"
+          >
+            <mat-expansion-panel-header class="!h-24">
+              <mat-panel-title>
+                <span class="mr-4 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-blue)]">
+                  0{{ index + 1 }}
+                </span>
+                {{ format.title }}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <div class="grid gap-8 pt-2 md:grid-cols-[1.2fr_0.8fr]">
+              <div>
+                <p class="text-base leading-7 text-[var(--sr-text-muted)]">{{ format.text }}</p>
+              </div>
+
+              <div class="space-y-5 border-t border-[var(--sr-border)] pt-5 md:border-l md:border-t-0 md:pl-6 md:pt-0">
+                <div>
+                  <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+                    Dauer
+                  </p>
+                  <p class="mt-2 text-sm font-medium text-[var(--sr-heading)]">{{ format.duration }}</p>
+                </div>
+
+                <ul class="space-y-3">
+                  @for (bullet of format.bullets; track bullet) {
+                    <li class="flex gap-3 text-sm leading-6 text-[var(--sr-text-muted)]">
+                      <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--sr-green)]"></span>
+                      <span>{{ bullet }}</span>
+                    </li>
+                  }
+                </ul>
+              </div>
+            </div>
+          </mat-expansion-panel>
+        }
+      </mat-accordion>
+    </div>
+  </div>
+</section>

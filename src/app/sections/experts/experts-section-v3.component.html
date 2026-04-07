@@ -1,0 +1,122 @@
+<section id="experten" class="sr-section border-y border-[var(--sr-border)] bg-white/72">
+  <div class="sr-container space-y-12">
+    <div class="grid gap-8 xl:grid-cols-[0.72fr_1.28fr] xl:items-end">
+      <app-section-heading
+        srReveal
+        eyebrow="Expert:innen"
+        title="Mit Menschen, die Wandel, Führung und Kompetenzaufbau aus echter Praxis kennen"
+        intro="Die Academy arbeitet mit Expert:innen, die nicht über Transformation sprechen, sondern sie in Organisationen, Teams und Rollen konkret gestalten."
+      />
+
+      <div
+        srReveal
+        srRevealFrom="right"
+        srRevealDelay="100ms"
+        class="grid gap-4 sm:grid-cols-3"
+      >
+        <article class="sr-panel rounded-[1.35rem] p-5">
+          <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+            Netzwerk
+          </p>
+          <p class="mt-3 text-[1.8rem] font-semibold tracking-[-0.06em] text-[var(--sr-heading)]">
+            {{ experts().length }}
+          </p>
+          <p class="mt-2 text-sm leading-6 text-[var(--sr-text-muted)]">
+            Expert:innen aus Leadership, Product, KI, Change, Recht und Security
+          </p>
+        </article>
+
+        <article class="sr-panel rounded-[1.35rem] p-5">
+          <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+            Fokus
+          </p>
+          <p class="mt-3 text-base font-semibold text-[var(--sr-heading)]">
+            Arbeitsweltrelevant statt abstrakt
+          </p>
+          <p class="mt-2 text-sm leading-6 text-[var(--sr-text-muted)]">
+            Inhalte mit Bezug zu echter Führung, Zusammenarbeit, Produkt- und Organisationspraxis
+          </p>
+        </article>
+
+        <article class="sr-panel rounded-[1.35rem] p-5">
+          <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+            Arbeitsweise
+          </p>
+          <p class="mt-3 text-base font-semibold text-[var(--sr-heading)]">
+            Sparring, Transfer und Umsetzung
+          </p>
+          <p class="mt-2 text-sm leading-6 text-[var(--sr-text-muted)]">
+            Nicht nur Impulse, sondern anwendbare Perspektiven für Teams, Rollen und Entscheidungen
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+      @for (expert of experts(); track expert.name; let index = $index) {
+        <article
+          srReveal
+          [srRevealDelay]="(index % 4) * 70"
+          class="sr-expert-card"
+        >
+          <div class="sr-expert-card__media">
+            @if (expert.imageSrc) {
+              <img
+                class="sr-expert-card__image"
+                [src]="expert.imageSrc"
+                [alt]="expert.name"
+                loading="lazy"
+              />
+            } @else {
+              <div class="sr-expert-card__fallback">
+                {{ expert.initials }}
+              </div>
+            }
+          </div>
+
+          <div class="space-y-4 p-6">
+            <div>
+              <p class="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[var(--sr-blue)]">
+                Schwerpunkt
+              </p>
+              <h3 class="mt-3 text-[1.55rem] font-semibold leading-[1.04] tracking-[-0.05em] text-[var(--sr-heading)]">
+                {{ expert.name }}
+              </h3>
+              <p class="mt-3 text-sm font-medium leading-6 text-[var(--sr-heading)]">
+                {{ expert.role }}
+              </p>
+            </div>
+
+            <p class="text-sm leading-7 text-[var(--sr-text-muted)]">
+              {{ expert.bio }}
+            </p>
+
+            @if (expert.credentials) {
+              <div class="border-t border-[var(--sr-border)] pt-4">
+                <p class="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[var(--sr-text-muted)]">
+                  Referenzen
+                </p>
+                <p class="mt-2 text-[0.82rem] leading-6 text-[var(--sr-text-muted)]">
+                  {{ expert.credentials }}
+                </p>
+              </div>
+            }
+          </div>
+        </article>
+      }
+    </div>
+
+    <div
+      srReveal
+      srRevealDelay="120ms"
+      class="border-t border-[var(--sr-border)] pt-8"
+    >
+      <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+        Aktuelles Netzwerk
+      </p>
+      <p class="mt-4 max-w-[58rem] text-lg leading-8 text-[var(--sr-heading)]">
+        Gregor Theado, Kristina Muth, Cansel Sörgens, Matthias Orgler, Patrick Kapahnke, Rubina Kapahnke, Julia Bernarding und Sebastian Froede bringen Perspektiven aus Recht, Leadership, Product, Innovation, KI, Organisationsentwicklung und IT-Security zusammen.
+      </p>
+    </div>
+  </div>
+</section>

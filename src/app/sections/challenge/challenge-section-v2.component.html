@@ -1,0 +1,86 @@
+<section id="warum" class="relative overflow-hidden bg-[var(--sr-navy)] py-20 text-white sm:py-24 lg:py-32">
+  <svg
+    aria-hidden="true"
+    class="absolute inset-0 h-full w-full text-white/10"
+    fill="none"
+    viewBox="0 0 1200 700"
+  >
+    <path d="M-60 140 C 240 90 380 170 520 340 S 940 660 1280 560" stroke="currentColor" stroke-width="2" />
+    <path d="M-90 290 C 180 230 340 280 500 430 S 930 700 1260 650" stroke="currentColor" stroke-width="2" />
+    <path d="M820 -20 L 820 720" stroke="currentColor" stroke-width="1" stroke-dasharray="4 12" />
+    <path d="M960 -20 L 960 720" stroke="currentColor" stroke-width="1" stroke-dasharray="4 12" />
+    <circle cx="820" cy="178" r="7" fill="rgba(95,135,153,0.84)" />
+    <circle cx="960" cy="248" r="7" fill="rgba(25,178,123,0.62)" />
+    <circle cx="1030" cy="372" r="110" fill="rgba(95,135,153,0.1)" />
+  </svg>
+
+  <div class="sr-container">
+    <span
+      srReveal
+      class="sr-kicker border-white/10 bg-white/[0.06] text-white/80"
+    >
+      {{ content().eyebrow }}
+    </span>
+
+    <div class="mt-8 grid gap-12 xl:grid-cols-[1.12fr_0.88fr] xl:items-end">
+      <div srReveal srRevealFrom="left" srRevealDelay="60ms">
+        <h2 class="sr-balance max-w-[56rem] text-[3.2rem] font-semibold leading-[0.94] tracking-[-0.08em] text-white sm:text-[4.5rem] lg:text-[6rem]">
+          {{ content().title }}
+        </h2>
+      </div>
+
+      <div class="relative" srReveal srRevealFrom="right" srRevealDelay="140ms">
+        <p class="text-lg leading-8 text-white/72">
+          {{ content().intro }}
+        </p>
+
+        <div class="mt-8 hidden xl:block">
+          <svg aria-hidden="true" class="h-24 w-full text-white/25" fill="none" viewBox="0 0 420 110">
+            <path d="M0 74 C 44 68 70 26 116 26 S 194 94 248 94 S 312 18 420 22" stroke="currentColor" stroke-width="2" />
+            <path d="M0 92 H 420" stroke="currentColor" stroke-width="1" stroke-dasharray="4 8" />
+            <circle cx="116" cy="26" r="5" fill="rgba(95,135,153,0.95)" />
+            <circle cx="248" cy="94" r="5" fill="rgba(25,178,123,0.9)" />
+            <circle cx="352" cy="32" r="5" fill="rgba(255,255,255,0.75)" />
+            <rect x="22" y="20" width="44" height="52" rx="10" stroke="currentColor" />
+            <rect x="82" y="42" width="24" height="30" rx="8" fill="rgba(255,255,255,0.06)" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-14 grid gap-5 md:grid-cols-3">
+      @for (card of content().cards; track card.title; let index = $index) {
+        <article
+          srReveal
+          [srRevealDelay]="180 + index * 80"
+          class="border-t border-white/15 pt-6"
+        >
+          <p class="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-[var(--sr-blue)]">
+            0{{ index + 1 }}
+          </p>
+          <h3 class="mt-4 text-[1.6rem] font-semibold tracking-[-0.05em] text-white">
+            {{ card.title }}
+          </h3>
+          <p class="mt-4 max-w-[26rem] text-base leading-7 text-white/68">
+            {{ card.text }}
+          </p>
+        </article>
+      }
+    </div>
+
+    <div class="mt-16 border-t border-white/12">
+      <div class="grid gap-0 md:grid-cols-2 xl:grid-cols-4">
+        @for (item of content().outcomes; track item; let index = $index) {
+          <article
+            srReveal
+            [srRevealDelay]="index * 70"
+            class="border-b border-white/12 py-5 md:pr-8 xl:pr-6"
+          >
+            <span class="block h-px w-10 bg-[var(--sr-blue)]"></span>
+            <p class="mt-4 text-sm leading-6 text-white/82">{{ item }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </div>
+</section>

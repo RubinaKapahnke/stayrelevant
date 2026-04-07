@@ -1,0 +1,20 @@
+<section id="faq" class="sr-section">
+  <div class="sr-container space-y-10">
+    <app-section-heading
+      eyebrow="FAQ"
+      title="Fragen, die vor dem Start typischerweise auftauchen"
+      intro="Die Academy ist bewusst so positioniert, dass sie zwischen Technologie, Arbeitsrealität und menschlicher Entwicklung vermittelt."
+    />
+
+    <mat-accordion class="grid gap-4">
+      @for (item of items(); track item.question) {
+        <mat-expansion-panel class="sr-expansion" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>{{ item.question }}</mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>{{ item.answer }}</p>
+        </mat-expansion-panel>
+      }
+    </mat-accordion>
+  </div>
+</section>

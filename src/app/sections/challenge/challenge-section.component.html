@@ -1,0 +1,42 @@
+<section id="warum" class="sr-section">
+  <div class="sr-container space-y-10">
+    <div class="grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-start xl:gap-14">
+      <app-section-heading
+        [eyebrow]="content().eyebrow"
+        [title]="content().title"
+        [intro]="content().intro"
+      />
+
+      <aside class="sr-panel rounded-[1.75rem] p-6 sm:p-8">
+        <span class="sr-chip sr-chip--green">Was Stay Relevant Academy schließt</span>
+        <ul class="mt-6 space-y-4">
+          @for (item of content().outcomes; track item) {
+            <li class="flex gap-3">
+              <span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--sr-green)]"></span>
+              <span class="text-base leading-7 text-[var(--sr-text-muted)]">{{ item }}</span>
+            </li>
+          }
+        </ul>
+      </aside>
+    </div>
+
+    <div class="grid gap-5 xl:grid-cols-3">
+      @for (card of content().cards; track card.title; let index = $index) {
+        <mat-card
+          appearance="outlined"
+          class="sr-card sr-fade-up rounded-[1.75rem] p-6 sm:p-7"
+          [class.sr-delay-1]="index === 1"
+          [class.sr-delay-2]="index === 2"
+        >
+          <span class="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--sr-blue)]">
+            0{{ index + 1 }}
+          </span>
+          <h3 class="mt-5 text-2xl font-semibold tracking-[-0.04em] text-[var(--sr-heading)]">
+            {{ card.title }}
+          </h3>
+          <p class="mt-4 text-base leading-7 text-[var(--sr-text-muted)]">{{ card.text }}</p>
+        </mat-card>
+      }
+    </div>
+  </div>
+</section>

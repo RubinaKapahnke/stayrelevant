@@ -1,0 +1,111 @@
+<a class="sr-skip-link" href="#main-content">Zum Inhalt springen</a>
+
+<div class="relative min-h-screen">
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-[rgba(9,23,47,0.08)] bg-[rgba(247,249,252,0.9)] backdrop-blur-xl">
+    <div class="sr-container flex h-20 items-center justify-between gap-6">
+      <app-brand-mark />
+
+      @if (mode() === 'home') {
+        <nav class="hidden items-center gap-7 lg:flex" aria-label="Hauptnavigation">
+          @for (item of headerNavItems; track item.label) {
+            <a
+              [href]="item.href"
+              class="text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-[var(--sr-text-muted)] transition hover:text-[var(--sr-blue)]"
+            >
+              {{ item.label }}
+            </a>
+          }
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a
+            mat-stroked-button
+            class="sr-button sr-button-secondary hidden md:inline-flex"
+            href="#kurse"
+          >
+            Kursportfolio
+          </a>
+          <a mat-flat-button class="sr-button sr-button-primary" href="#kontakt">
+            Beratung anfragen
+          </a>
+        </div>
+      } @else {
+        <a mat-stroked-button class="sr-button sr-button-secondary" routerLink="/">
+          Zur Startseite
+        </a>
+      }
+    </div>
+  </header>
+
+  <main id="main-content" class="pt-20">
+    <ng-content />
+  </main>
+
+  <footer class="mt-20 border-t border-[rgba(255,255,255,0.08)] bg-[var(--sr-navy)] text-white">
+    <div class="sr-container grid gap-12 py-16 lg:grid-cols-[1.4fr_0.9fr_1fr]">
+      <div class="space-y-5">
+        <app-brand-mark [inverse]="true" />
+        <p class="max-w-md text-sm leading-7 text-white/70">
+          Weiterbildung für Menschen und Organisationen, die in einer veränderten Arbeitswelt
+          relevant bleiben wollen.
+        </p>
+        <p class="max-w-md text-sm leading-7 text-white/52">
+          Relevanz ist kein Hype-Begriff, sondern die Fähigkeit, in veränderter Arbeit sinnvoll
+          zu lernen, klarer zu entscheiden und anschlussfähig zu bleiben.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-white/50">Seiten</h3>
+        <ul class="mt-5 space-y-3 text-sm text-white/[0.72]">
+          @for (item of footerNavItems; track item.label) {
+            <li>
+              <a class="transition hover:text-white" [href]="item.href">{{ item.label }}</a>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-white/50">Kontakt</h3>
+          <div class="mt-5 space-y-3 text-sm text-white/[0.72]">
+            <a class="block transition hover:text-white" [href]="contactEmailHref">
+              {{ contactEmail }}
+            </a>
+            <a class="block transition hover:text-white" [href]="contactPhoneHref">
+              {{ contactPhoneDisplay }}
+            </a>
+            <span class="block">{{ contactLocation }}</span>
+            @for (link of socialLinks; track link.label) {
+              <a
+                class="block transition hover:text-white"
+                [href]="link.href"
+                [target]="link.href.startsWith('http') ? '_blank' : null"
+                [rel]="link.href.startsWith('http') ? 'noreferrer' : null"
+              >
+                {{ link.label }}
+              </a>
+            }
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-white/50">Rechtliches</h3>
+          <ul class="mt-5 space-y-3 text-sm text-white/[0.72]">
+            <li>
+              <a class="transition hover:text-white" routerLink="/impressum">Impressum</a>
+            </li>
+            <li>
+              <a class="transition hover:text-white" routerLink="/datenschutz">Datenschutz</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sr-container border-t border-white/10 py-5 text-xs text-white/45">
+      Kompetenzen, die Menschen und Teams relevant halten.
+    </div>
+  </footer>
+</div>

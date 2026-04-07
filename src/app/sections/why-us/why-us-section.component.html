@@ -1,0 +1,58 @@
+<section id="academy" class="sr-section">
+  <div class="sr-container grid gap-10 xl:grid-cols-[0.9fr_1.1fr]">
+    <div class="space-y-8">
+      <app-section-heading
+        eyebrow="Warum Stay Relevant Academy"
+        title="Kein Hype. Keine Zertifikatsfassade. Sondern relevante Weiterbildung."
+        intro="Die Academy soll Orientierung geben, Lernen fokussieren und Menschen befähigen, mit technologischem Wandel sinnvoll zu arbeiten."
+      />
+
+      <div class="sr-panel sr-panel--dark rounded-[1.9rem] p-7 sm:p-8">
+        <span class="sr-chip bg-white/10 text-white">Markenhaltung</span>
+        <p class="sr-balance mt-5 text-3xl font-semibold tracking-[-0.05em] text-white">
+          Zukunftsfähigkeit entsteht nicht durch Lautstärke, sondern durch Klarheit und Anwendbarkeit.
+        </p>
+        <p class="mt-5 text-base leading-7 text-white/[0.72]">
+          Stay Relevant Academy verbindet technologische Orientierung mit menschlicher Entwicklung. Das Ergebnis ist weder ein Tool-Kurs noch klassische Seminarlogik, sondern ein belastbarer Kompetenzaufbau für veränderte Arbeit.
+        </p>
+      </div>
+    </div>
+
+    <div class="space-y-5">
+      @for (item of differentiators(); track item.title) {
+        <mat-card appearance="outlined" class="sr-card rounded-[1.75rem] p-6 sm:p-7">
+          <h3 class="text-2xl font-semibold tracking-[-0.04em] text-[var(--sr-heading)]">
+            {{ item.title }}
+          </h3>
+          <p class="mt-4 text-base leading-7 text-[var(--sr-text-muted)]">{{ item.text }}</p>
+        </mat-card>
+      }
+
+      <div class="sr-panel rounded-[1.75rem] p-6 sm:p-7">
+        <div class="grid gap-5 md:grid-cols-2">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+              Oft in Weiterbildung
+            </p>
+            <ul class="mt-5 space-y-4">
+              @for (row of comparisonRows(); track row.common) {
+                <li class="text-sm leading-6 text-[var(--sr-text-muted)]">{{ row.common }}</li>
+              }
+            </ul>
+          </div>
+
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--sr-blue)]">
+              Bei Stay Relevant Academy
+            </p>
+            <ul class="mt-5 space-y-4">
+              @for (row of comparisonRows(); track row.stayRelevant) {
+                <li class="text-sm leading-6 text-[var(--sr-heading)]">{{ row.stayRelevant }}</li>
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

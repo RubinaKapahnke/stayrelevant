@@ -1,0 +1,31 @@
+<section id="zielgruppen" class="sr-section">
+  <div class="sr-container space-y-10">
+    <app-section-heading
+      eyebrow="Für wen das gedacht ist"
+      title="Vier typische Ausgangslagen. Ein gemeinsames Ziel: relevant bleiben."
+      intro="Stay Relevant Academy ist so gebaut, dass Inhalte für unterschiedliche Kontexte präzise anschlussfähig werden."
+    />
+
+    <div class="grid gap-5 md:grid-cols-2">
+      @for (audience of audiences(); track audience.title) {
+        <mat-card appearance="outlined" class="sr-card rounded-[1.8rem] p-6 sm:p-7">
+          <h3 class="text-2xl font-semibold tracking-[-0.04em] text-[var(--sr-heading)]">
+            {{ audience.title }}
+          </h3>
+          <p class="mt-4 text-base leading-7 text-[var(--sr-text-muted)]">{{ audience.text }}</p>
+
+          <div class="sr-divider my-6"></div>
+
+          <ul class="space-y-3">
+            @for (need of audience.needs; track need) {
+              <li class="flex gap-3 text-sm leading-6 text-[var(--sr-text-muted)]">
+                <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--sr-blue)]"></span>
+                <span>{{ need }}</span>
+              </li>
+            }
+          </ul>
+        </mat-card>
+      }
+    </div>
+  </div>
+</section>

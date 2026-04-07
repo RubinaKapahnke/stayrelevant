@@ -1,0 +1,78 @@
+<section id="report" class="sr-section">
+  <div class="sr-container">
+    <div class="grid gap-12 border-y border-[var(--sr-border)] py-10 lg:grid-cols-[1fr_0.62fr] lg:items-center">
+      <div class="max-w-[42rem]" srReveal srRevealFrom="left">
+        <span class="sr-kicker">{{ content().eyebrow }}</span>
+        <h2 class="mt-6 text-4xl font-semibold tracking-[-0.06em] text-[var(--sr-heading)] sm:text-5xl">
+          {{ content().title }}
+        </h2>
+        <p class="mt-6 text-lg leading-8 text-[var(--sr-text-muted)]">
+          {{ content().text }}
+        </p>
+
+        <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+          <a
+            mat-flat-button
+            class="sr-button !h-[4.1rem] !rounded-[0.75rem] !bg-[var(--sr-navy)] !px-9 !font-semibold !text-white"
+            href="mailto:info@stayrelevant-academy.de?subject=Arbeitswelt-Report%202026"
+          >
+            {{ content().cta }}
+          </a>
+          <a
+            mat-stroked-button
+            class="sr-button sr-button-secondary !h-[4.1rem] !rounded-[0.75rem] !px-9"
+            href="#kontakt"
+          >
+            Beratung anfragen
+          </a>
+        </div>
+
+        <p class="mt-5 text-sm leading-6 text-[var(--sr-text-muted)]">{{ content().note }}</p>
+      </div>
+
+      <div class="flex justify-center lg:justify-end" srReveal srRevealFrom="scale" srRevealDelay="120ms">
+        <div class="relative w-[15rem] overflow-hidden rounded-[0.75rem] border border-[var(--sr-border-strong)] border-l-[10px] border-l-[var(--sr-blue)] bg-[linear-gradient(145deg,#f8fafc,#dde5ef)] p-7 text-[var(--sr-heading)] shadow-[0_12px_28px_rgba(9,23,47,0.08)]">
+          <svg
+            aria-hidden="true"
+            class="absolute inset-0 h-full w-full text-[rgba(19,52,95,0.14)]"
+            fill="none"
+            viewBox="0 0 240 360"
+          >
+            <path d="M18 86 H 222" stroke="currentColor" stroke-width="1" stroke-dasharray="4 8" />
+            <path d="M18 142 H 222" stroke="currentColor" stroke-width="1" stroke-dasharray="4 8" />
+            <path d="M18 198 H 222" stroke="currentColor" stroke-width="1" stroke-dasharray="4 8" />
+            <path d="M46 30 V 332" stroke="currentColor" stroke-width="1" stroke-dasharray="4 8" />
+            <path d="M126 30 V 332" stroke="currentColor" stroke-width="1" stroke-dasharray="4 8" />
+            <path d="M196 30 V 332" stroke="currentColor" stroke-width="1" stroke-dasharray="4 8" />
+            <path d="M18 240 C 70 240 86 172 126 172 S 170 266 222 266" stroke="currentColor" stroke-width="2" />
+            <circle cx="126" cy="172" r="7" fill="rgba(95,135,153,0.9)" />
+            <circle cx="196" cy="266" r="5" fill="rgba(25,178,123,0.85)" />
+          </svg>
+
+          <div class="flex items-start justify-between">
+            <span class="h-4 w-4 rounded-[0.35rem] bg-[var(--sr-blue)]"></span>
+            <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+              Q1 / 2026
+            </span>
+          </div>
+
+          <div class="relative z-10 mt-16">
+            <h3 class="text-[2rem] font-semibold leading-[0.95] tracking-[-0.07em]">
+              Relevance<br />
+              at Work<br />
+              Report
+            </h3>
+            <span class="mt-5 block h-1 w-14 bg-[var(--sr-blue)]"></span>
+            <p class="mt-5 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+              Skills, KI & Arbeitsrealität
+            </p>
+          </div>
+
+          <p class="mt-16 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+            Stay Relevant Academy
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

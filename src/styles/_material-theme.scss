@@ -1,0 +1,51 @@
+@use '@angular/material' as mat;
+
+$stay-relevant-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$azure-palette,
+    tertiary: mat.$spring-green-palette
+  ),
+  typography: (
+    brand-family: 'Manrope, "Segoe UI", sans-serif',
+    plain-family: 'Manrope, "Segoe UI", sans-serif',
+    bold-weight: 700,
+    medium-weight: 600,
+    regular-weight: 400
+  ),
+  density: (
+    scale: -3
+  )
+));
+
+@mixin apply-theme() {
+  @include mat.core();
+
+  :root {
+    @include mat.all-component-themes($stay-relevant-theme);
+    @include mat.typography-hierarchy($stay-relevant-theme);
+
+    color-scheme: light;
+
+    --font-display: 'Space Grotesk', 'Manrope', 'Segoe UI', sans-serif;
+    --font-body: 'Manrope', 'Segoe UI', sans-serif;
+    --sr-bg: #f2f6fb;
+    --sr-surface: rgba(255, 255, 255, 0.82);
+    --sr-surface-strong: #ffffff;
+    --sr-surface-muted: #eaf0f7;
+    --sr-border: rgba(10, 28, 58, 0.1);
+    --sr-border-strong: rgba(10, 28, 58, 0.16);
+    --sr-text: #24324a;
+    --sr-text-muted: #5a677d;
+    --sr-heading: #09172f;
+    --sr-navy: #091328;
+    --sr-navy-soft: #13345f;
+    --sr-blue: #5f8799;
+    --sr-blue-rgb: 95, 135, 153;
+    --sr-green: #19b27b;
+    --sr-shadow: 0 14px 36px rgba(9, 23, 47, 0.07);
+    --sr-shadow-soft: 0 8px 20px rgba(9, 23, 47, 0.04);
+    --sr-grid-line: rgba(11, 29, 58, 0.06);
+    --sr-max-width: 106rem;
+  }
+}

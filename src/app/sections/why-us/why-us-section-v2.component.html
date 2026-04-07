@@ -1,0 +1,111 @@
+<section id="academy" class="sr-section">
+  <div class="sr-container space-y-14">
+    <div class="grid gap-12 xl:grid-cols-[0.72fr_1.28fr] xl:items-start">
+      <div class="space-y-6" srReveal srRevealFrom="left">
+        <span class="sr-kicker">Warum Stay Relevant Academy</span>
+        <div class="max-w-[34rem] space-y-5">
+          <h2 class="sr-balance text-4xl font-semibold tracking-[-0.06em] text-[var(--sr-heading)] sm:text-5xl">
+            Weiterbildung, die bei Rollen, Entscheidungen und Aufgaben beginnt.
+          </h2>
+          <p class="text-lg leading-8 text-[var(--sr-text-muted)]">
+            Gute Weiterbildung startet nicht bei Trends oder Toollisten, sondern dort, wo Arbeit sich konkret verändert und neue Kompetenz wirklich gebraucht wird.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid gap-10 md:grid-cols-3" srReveal srRevealFrom="right" srRevealDelay="120ms">
+        @for (step of methodologySteps; track step.step; let index = $index) {
+          <article srReveal [srRevealDelay]="index * 80">
+            <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[var(--sr-heading)] text-sm font-semibold text-[var(--sr-heading)]">
+              {{ step.step }}
+            </div>
+            <h3 class="mt-6 text-xl font-semibold tracking-[-0.04em] text-[var(--sr-heading)]">
+              {{ step.title }}
+            </h3>
+            <p class="mt-4 text-sm leading-7 text-[var(--sr-text-muted)]">{{ step.text }}</p>
+          </article>
+        }
+      </div>
+    </div>
+
+    <div
+      srReveal
+      srRevealFrom="scale"
+      class="relative overflow-hidden rounded-[1.8rem] bg-[var(--sr-navy)] px-7 py-8 text-white sm:px-10 sm:py-10 xl:px-12 xl:py-12"
+    >
+      <div
+        aria-hidden="true"
+        class="pointer-events-none absolute inset-y-0 left-0 right-0 hidden xl:block bg-[linear-gradient(90deg,rgba(9,19,40,1)_0%,rgba(9,19,40,0.98)_54%,rgba(9,19,40,0.88)_74%,rgba(9,19,40,0)_100%)]"
+      ></div>
+      <svg
+        aria-hidden="true"
+        class="pointer-events-none absolute right-[-4rem] top-[-3rem] hidden h-[22rem] w-[22rem] text-white/[0.06] xl:block 2xl:right-[-5rem] 2xl:top-[-4rem] 2xl:h-[28rem] 2xl:w-[28rem]"
+        fill="none"
+        viewBox="0 0 520 520"
+      >
+        <path d="M42 70 H 478" stroke="currentColor" stroke-width="1" stroke-dasharray="4 10" />
+        <path d="M42 170 H 478" stroke="currentColor" stroke-width="1" stroke-dasharray="4 10" />
+        <path d="M42 270 H 478" stroke="currentColor" stroke-width="1" stroke-dasharray="4 10" />
+        <path d="M42 370 H 478" stroke="currentColor" stroke-width="1" stroke-dasharray="4 10" />
+        <path d="M110 20 V 500" stroke="currentColor" stroke-width="1" stroke-dasharray="4 10" />
+        <path d="M240 20 V 500" stroke="currentColor" stroke-width="1" stroke-dasharray="4 10" />
+        <path d="M370 20 V 500" stroke="currentColor" stroke-width="1" stroke-dasharray="4 10" />
+        <path d="M70 120 C 150 120 180 220 240 220 S 350 120 450 120" stroke="currentColor" stroke-width="2" />
+        <path d="M70 320 C 150 320 190 420 240 420 S 330 320 450 320" stroke="currentColor" stroke-width="2" />
+        <circle cx="240" cy="220" r="12" fill="rgba(95,135,153,0.76)" />
+        <circle cx="370" cy="120" r="8" fill="rgba(25,178,123,0.72)" />
+      </svg>
+
+      <div class="relative z-10 grid gap-12 xl:grid-cols-[0.78fr_1.22fr]">
+        <div class="max-w-[34rem] space-y-5">
+          <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-white/50">
+            Markenhaltung
+          </p>
+          <h3 class="sr-balance text-4xl font-semibold tracking-[-0.06em] text-white sm:text-5xl">
+            Mensch plus Technologie, arbeitsweltrelevant statt trendgetrieben.
+          </h3>
+          <p class="text-lg leading-8 text-white/[0.72]">
+            Die Academy verbindet technologische Orientierung mit menschlicher Entwicklung. Das Ergebnis ist weder Tool-Hype noch klassische Seminarlogik.
+          </p>
+        </div>
+
+        <div class="border-t border-white/12">
+          @for (item of differentiators(); track item.title) {
+            <article class="grid gap-4 border-b border-white/12 py-5 lg:grid-cols-[15rem_1fr] lg:gap-8">
+              <h4 class="text-xl font-semibold tracking-[-0.04em] text-white">{{ item.title }}</h4>
+              <p class="max-w-[34rem] text-sm leading-7 text-white/[0.72]">{{ item.text }}</p>
+            </article>
+          }
+        </div>
+      </div>
+
+      <div class="relative z-10 mt-12 grid gap-8 xl:grid-cols-2">
+        <div>
+          <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-white/50">
+            Oft in Weiterbildung
+          </p>
+          <div class="mt-4 border-t border-white/12">
+            @for (row of comparisonRows(); track row.common) {
+              <p class="border-b border-white/12 py-4 text-sm leading-7 text-white/60">
+                {{ row.common }}
+              </p>
+            }
+          </div>
+        </div>
+
+        <div>
+          <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-blue)]">
+            Bei Stay Relevant Academy
+          </p>
+          <div class="mt-4 border-t border-white/12">
+            @for (row of comparisonRows(); track row.stayRelevant) {
+              <p class="border-b border-white/12 py-4 text-sm leading-7 text-white">
+                {{ row.stayRelevant }}
+              </p>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

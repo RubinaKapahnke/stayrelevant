@@ -1,0 +1,17 @@
+<div
+  class="sr-section-heading"
+  [class.mx-auto]="align() === 'center'"
+  [class.text-center]="align() === 'center'"
+>
+  <span class="sr-kicker">{{ eyebrow() }}</span>
+  <h2
+    class="sr-balance mt-5 text-3xl font-semibold tracking-[-0.05em] text-[var(--sr-heading)] sm:text-4xl lg:text-[3rem]"
+  >
+    {{ title() }}
+  </h2>
+  @if (intro()) {
+    <p class="sr-balance mt-5 text-lg leading-8 text-[var(--sr-text-muted)]">
+      {{ intro() }}
+    </p>
+  }
+</div>

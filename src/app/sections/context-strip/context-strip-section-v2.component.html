@@ -1,0 +1,21 @@
+<section aria-label="Einsatzfelder" class="border-y border-[var(--sr-border)] bg-white/72">
+  <div class="sr-container grid gap-8 py-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+    <div srReveal srRevealFrom="left">
+      <p class="text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-[var(--sr-text-muted)]">
+        Typische Einsatzfelder
+      </p>
+      <p class="mt-4 max-w-[30rem] text-lg leading-7 text-[var(--sr-heading)]">
+        Wir arbeiten dort, wo sich Aufgaben, Entscheidungen und Zusammenarbeit spürbar verändern
+        und neue Kompetenz wirklich gebraucht wird.
+      </p>
+    </div>
+
+    <div class="border-t border-[var(--sr-border)] pt-5" srReveal srRevealFrom="right" srRevealDelay="100ms">
+      <div class="grid gap-x-8 gap-y-4 text-sm text-[var(--sr-heading)] sm:grid-cols-2 xl:grid-cols-5">
+        @for (context of contexts; track context.label) {
+          <p class="font-medium">{{ context.label }}</p>
+        }
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,64 @@
+<section id="experten" class="sr-section border-y border-[var(--sr-border)] bg-white/72">
+  <div class="sr-container space-y-12">
+    <div class="grid gap-8 xl:grid-cols-[0.72fr_1.28fr] xl:items-end">
+      <app-section-heading
+        srReveal
+        eyebrow="Expert:innen"
+        title="Mit Menschen, die Wandel, Führung und Kompetenzaufbau aus echter Praxis kennen"
+        intro="Die Academy arbeitet mit Expert:innen, die nicht über Transformation sprechen, sondern sie in Organisationen, Teams und Rollen konkret gestalten."
+      />
+
+      <div srReveal srRevealFrom="right" srRevealDelay="100ms">
+        <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+          Aktuelles Netzwerk
+        </p>
+        <p class="mt-4 max-w-[34rem] text-lg leading-7 text-[var(--sr-heading)]">
+          Gregor Theado, Kristina Muth, Cansel Sörgens, Matthias Orgler, Patrick Kapahnke, Julia Bernarding und Sebastian Froede bringen Perspektiven aus Recht, Learning, Product, Innovation, KI, Organisationsentwicklung und IT-Security zusammen.
+        </p>
+      </div>
+    </div>
+
+    <div class="border-t border-[var(--sr-border)]">
+      @for (expert of experts(); track expert.name; let index = $index) {
+        <article
+          srReveal
+          [srRevealDelay]="(index % 4) * 70"
+          class="grid gap-4 border-b border-[var(--sr-border)] py-7 lg:grid-cols-[16rem_14rem_1fr] lg:gap-8"
+        >
+          <div class="flex items-center gap-4">
+            @if (expert.imageSrc) {
+              <img
+                class="h-12 w-12 rounded-full border border-[var(--sr-border)] object-cover object-top"
+                [src]="expert.imageSrc"
+                [alt]="expert.name"
+                loading="lazy"
+              />
+            } @else {
+              <div class="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--sr-border)] text-sm font-semibold text-[var(--sr-heading)]">
+                {{ expert.initials }}
+              </div>
+            }
+            <h3 class="text-xl font-semibold tracking-[-0.04em] text-[var(--sr-heading)]">
+              {{ expert.name }}
+            </h3>
+          </div>
+
+          <p class="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[var(--sr-blue)] lg:pt-1.5">
+            {{ expert.role }}
+          </p>
+
+          <div class="space-y-3">
+            <p class="max-w-[42rem] text-sm leading-7 text-[var(--sr-text-muted)]">
+              {{ expert.bio }}
+            </p>
+            @if (expert.credentials) {
+              <p class="max-w-[42rem] text-[0.78rem] leading-6 text-[var(--sr-text-muted)]">
+                {{ expert.credentials }}
+              </p>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

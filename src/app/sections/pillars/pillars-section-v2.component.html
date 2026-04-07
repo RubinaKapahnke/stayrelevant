@@ -1,0 +1,57 @@
+<section id="lernfelder" class="sr-section">
+  <div class="sr-container space-y-10">
+    <div class="grid gap-8 xl:grid-cols-[0.8fr_1.2fr] xl:items-end">
+      <app-section-heading
+        srReveal
+        eyebrow="Was wir vermitteln"
+        title="Lernfelder, die auf echte Arbeitsrealität einzahlen"
+        intro="Die Inhalte sind so gewählt, dass sie Menschen nicht nur informieren, sondern ihre berufliche Anschlussfähigkeit konkret stärken."
+      />
+
+      <div
+        srReveal
+        srRevealFrom="right"
+        srRevealDelay="100ms"
+        class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-[var(--sr-heading)]"
+      >
+        <span class="font-medium">Technologie</span>
+        <span class="text-[var(--sr-text-muted)]">/</span>
+        <span class="font-medium">Mensch</span>
+        <span class="text-[var(--sr-text-muted)]">/</span>
+        <span class="font-medium">Relevanz</span>
+      </div>
+    </div>
+
+    <div class="border-t border-[var(--sr-border)]">
+      @for (pillar of pillars(); track pillar.title; let index = $index) {
+        <article
+          srReveal
+          [srRevealDelay]="index * 70"
+          class="grid gap-6 border-b border-[var(--sr-border)] py-8 lg:grid-cols-[15rem_1fr_1fr] lg:gap-8"
+        >
+          <div>
+            <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-blue)]">
+              0{{ index + 1 }} / {{ pillar.label }}
+            </p>
+            <h3 class="mt-4 text-[1.8rem] font-semibold tracking-[-0.05em] text-[var(--sr-heading)]">
+              {{ pillar.title }}
+            </h3>
+          </div>
+
+          <p class="max-w-[38rem] text-base leading-7 text-[var(--sr-text-muted)]">
+            {{ pillar.text }}
+          </p>
+
+          <ul class="space-y-3">
+            @for (outcome of pillar.outcomes; track outcome) {
+              <li class="flex gap-3 text-sm leading-6 text-[var(--sr-text-muted)]">
+                <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--sr-blue)]"></span>
+                <span class="ml-3">{{ outcome }}</span>
+              </li>
+            }
+          </ul>
+        </article>
+      }
+    </div>
+  </div>
+</section>

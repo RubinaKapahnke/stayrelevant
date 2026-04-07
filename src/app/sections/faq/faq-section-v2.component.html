@@ -1,0 +1,39 @@
+<section id="faq" class="sr-section">
+  <div class="sr-container grid gap-12 xl:grid-cols-[0.72fr_1.28fr] xl:items-start">
+    <div class="space-y-6 xl:sticky xl:top-28" srReveal srRevealFrom="left">
+      <app-section-heading
+        eyebrow="FAQ"
+        title="Fragen, die vor dem Start typischerweise auftauchen"
+        intro="Die Academy ist bewusst so positioniert, dass sie zwischen Technologie, Arbeitsrealität und menschlicher Entwicklung vermittelt."
+      />
+
+      <div class="border-t border-[var(--sr-border)] pt-6">
+        <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+          Typischer Startpunkt
+        </p>
+        <p class="mt-4 max-w-[30rem] text-base leading-7 text-[var(--sr-heading)]">
+          Meist beginnt es mit einem kurzen Gespräch oder einem kompakten Relevance Sprint,
+          nicht mit einem vorschnell gebuchten Standardprogramm.
+        </p>
+        <a
+          class="mt-5 inline-flex items-center gap-3 text-sm font-semibold text-[var(--sr-blue)] transition hover:text-[var(--sr-heading)]"
+          href="#kontakt"
+        >
+          Beratung anfragen
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+
+    <mat-accordion class="grid gap-3 border-t border-[var(--sr-border)] pt-3" srReveal srRevealFrom="right" srRevealDelay="100ms">
+      @for (item of items(); track item.question; let index = $index) {
+        <mat-expansion-panel class="sr-expansion" srReveal [srRevealDelay]="index * 60">
+          <mat-expansion-panel-header>
+            <mat-panel-title>{{ item.question }}</mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>{{ item.answer }}</p>
+        </mat-expansion-panel>
+      }
+    </mat-accordion>
+  </div>
+</section>

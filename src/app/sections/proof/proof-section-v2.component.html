@@ -1,0 +1,74 @@
+<section id="proof" class="sr-section">
+  <div class="sr-container space-y-10">
+    <div class="grid gap-10 xl:grid-cols-[0.76fr_1.24fr] xl:items-end">
+      <app-section-heading
+        srReveal
+        eyebrow="Vertrauen und Proof"
+        title="Substanz statt großer Behauptungen"
+        intro="Solange Referenzen und Fallstudien noch aufgebaut werden, zeigt die Website bewusst konkrete Formatlogik und realistische Ergebnisse statt überzogener Erfolgsgeschichten."
+      />
+
+      <div class="grid gap-8 border-y border-[var(--sr-border)] py-6 sm:grid-cols-3" srReveal srRevealFrom="right" srRevealDelay="100ms">
+        @for (stat of stats(); track stat.label; let index = $index) {
+          <article srReveal [srRevealDelay]="index * 70">
+            <p class="text-2xl font-semibold tracking-[-0.05em] text-[var(--sr-heading)]">
+              {{ stat.value }}
+            </p>
+            <p class="mt-3 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+              {{ stat.label }}
+            </p>
+            <p class="mt-3 text-sm leading-6 text-[var(--sr-text-muted)]">{{ stat.detail }}</p>
+          </article>
+        }
+      </div>
+    </div>
+
+    <div class="grid gap-12 xl:grid-cols-[0.94fr_1.06fr]">
+      <article srReveal srRevealFrom="left">
+        <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+          Stimmen aus der Praxis
+        </p>
+        <blockquote class="mt-6 max-w-[40rem] border-l-2 border-[var(--sr-blue)] pl-6 text-[1.8rem] font-medium leading-[1.35] tracking-[-0.04em] text-[var(--sr-heading)]">
+          {{ testimonial.quote }}
+        </blockquote>
+        <div class="mt-8 flex items-center gap-4">
+          <div class="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--sr-surface-muted)] text-sm font-semibold text-[var(--sr-heading)]">
+            NB
+          </div>
+          <div>
+            <p class="font-semibold text-[var(--sr-heading)]">{{ testimonial.name }}</p>
+            <p class="text-sm text-[var(--sr-text-muted)]">{{ testimonial.role }}</p>
+          </div>
+        </div>
+      </article>
+
+      <div class="border-t border-[var(--sr-border)] xl:border-t-0 xl:border-l xl:pl-10">
+        @for (card of cards(); track card.title; let index = $index) {
+          <article
+            srReveal
+            srRevealFrom="right"
+            [srRevealDelay]="index * 80"
+            class="border-b border-[var(--sr-border)] py-6"
+          >
+            <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-blue)]">
+              0{{ index + 1 }}
+            </p>
+            <h3 class="mt-4 text-2xl font-semibold tracking-[-0.04em] text-[var(--sr-heading)]">
+              {{ card.title }}
+            </h3>
+            <p class="mt-4 max-w-[38rem] text-base leading-7 text-[var(--sr-text-muted)]">{{ card.text }}</p>
+
+            <ul class="mt-5 grid gap-3 sm:grid-cols-3">
+              @for (point of card.points; track point) {
+                <li class="text-sm leading-6 text-[var(--sr-text-muted)]">
+                  <span class="mr-3 inline-block h-2 w-2 rounded-full bg-[var(--sr-green)]"></span>
+                  {{ point }}
+                </li>
+              }
+            </ul>
+          </article>
+        }
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,197 @@
+<section id="kurse" class="sr-section">
+  <div class="sr-container space-y-10">
+    <div class="grid gap-8 xl:grid-cols-[0.78fr_1.22fr] xl:items-end">
+      <app-section-heading
+        srReveal
+        eyebrow="Kursportfolio"
+        title="Rollenprogramme, Führungsformate und spezialisierte Kurse"
+        intro="Das Portfolio verbindet Leadership, KI, Daten, Produkt, Transformation und spezialisierte Formate in einer konsistenten Weiterbildungslogik."
+      />
+
+      <div srReveal srRevealFrom="right" srRevealDelay="100ms">
+        <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+          Angebotslogik
+        </p>
+        <p class="mt-4 max-w-[34rem] text-lg leading-7 text-[var(--sr-heading)]">
+          Statt alles gleich zu behandeln, zeigt die Academy zuerst einige besonders anschlussfähige Signaturprogramme und darunter das vollständige Portfolio nach Themenfeldern.
+        </p>
+      </div>
+    </div>
+
+    @if (selectedCategory() === 'Alle' && featuredCourses().length) {
+      <div class="grid gap-8 border-t border-[var(--sr-border)] pt-8 lg:grid-cols-4">
+        @for (course of featuredCourses(); track course.title; let index = $index) {
+          <article
+            srReveal
+            [srRevealDelay]="index * 70"
+            class="border-t border-[var(--sr-heading)] pt-5"
+          >
+            <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-blue)]">
+              {{ course.label }}
+            </p>
+            <h3 class="mt-4 text-[1.45rem] font-semibold leading-[1.08] tracking-[-0.05em] text-[var(--sr-heading)]">
+              {{ course.title }}
+            </h3>
+            <p class="mt-3 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[var(--sr-text-muted)]">
+              {{ course.duration }} · {{ course.audience }}
+            </p>
+            <p class="mt-4 text-sm leading-7 text-[var(--sr-text-muted)]">{{ course.text }}</p>
+          </article>
+        }
+      </div>
+    }
+
+    <div class="space-y-5 border-t border-[var(--sr-border)] pt-8" srReveal srRevealDelay="80ms">
+      <div class="flex flex-wrap gap-3">
+        @for (filter of categoryFilters(); track filter.label) {
+          <button
+            type="button"
+            class="sr-filter-button"
+            [attr.aria-pressed]="selectedCategory() === filter.label"
+            [class.sr-filter-button--active]="selectedCategory() === filter.label"
+            (click)="selectCategory(filter.label)"
+          >
+            <span>{{ filter.label }}</span>
+            <span
+              class="sr-filter-button__count"
+              [class.sr-filter-button__count--active]="selectedCategory() === filter.label"
+            >
+              {{ filter.count }}
+            </span>
+          </button>
+        }
+      </div>
+
+      <p class="text-sm leading-6 text-[var(--sr-text-muted)]">
+        @if (selectedCategory() === 'Alle') {
+          {{ listedCourses().length }} weitere Angebote im Portfolio
+        } @else {
+          {{ listedCourses().length }} Angebote in
+          <span class="font-semibold text-[var(--sr-heading)]">{{ selectedCategory() }}</span>
+        }
+      </p>
+    </div>
+
+    <div class="space-y-6 border-t border-[var(--sr-border)] pt-8" srReveal srRevealDelay="120ms">
+      <div class="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+            Programme im Überblick
+          </p>
+          <p class="mt-4 max-w-[38rem] text-base leading-7 text-[var(--sr-heading)]">
+            Ein schneller, horizontaler Überblick über die aktuell ausgewählten Kursangebote.
+            So lassen sich Themenfelder und Formate schneller vergleichen, bevor man in die Details geht.
+          </p>
+        </div>
+
+        @if (sliderCourses().length > 1) {
+          <div class="hidden items-center gap-3 sm:flex">
+            <button
+              type="button"
+              class="sr-slider-button"
+              (click)="scrollSlider(courseSlider, -1)"
+              aria-label="Vorherige Programme"
+            >
+              ←
+            </button>
+            <button
+              type="button"
+              class="sr-slider-button"
+              (click)="scrollSlider(courseSlider, 1)"
+              aria-label="Nächste Programme"
+            >
+              →
+            </button>
+          </div>
+        }
+      </div>
+
+      <div
+        #courseSlider
+        class="sr-slider-track"
+        tabindex="0"
+        aria-label="Kursangebote als Slider"
+      >
+        @for (course of sliderCourses(); track course.title; let index = $index) {
+          <article
+            srReveal
+            [srRevealDelay]="(index % 5) * 50"
+            class="sr-slider-card"
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-blue)]">
+                  {{ course.category }}
+                </p>
+                <h3 class="mt-4 text-[1.4rem] font-semibold leading-[1.08] tracking-[-0.05em] text-[var(--sr-heading)]">
+                  {{ course.title }}
+                </h3>
+              </div>
+
+              <span class="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[var(--sr-text-muted)]">
+                {{ course.duration }}
+              </span>
+            </div>
+
+            <p class="mt-4 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[var(--sr-text-muted)]">
+              {{ course.audience }}
+            </p>
+
+            <p class="mt-5 text-sm leading-7 text-[var(--sr-text-muted)]">
+              {{ course.text }}
+            </p>
+
+            <div class="mt-6 flex flex-wrap gap-2">
+              @for (outcome of course.outcomes; track outcome) {
+                <span class="sr-chip !bg-transparent !text-[var(--sr-heading)]">
+                  {{ outcome }}
+                </span>
+              }
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+
+    <div class="border-t border-[var(--sr-border)]">
+      @for (course of listedCourses(); track course.title; let index = $index) {
+        <article
+          srReveal
+          [srRevealDelay]="(index % 6) * 45"
+          class="grid gap-6 border-b border-[var(--sr-border)] py-7 xl:grid-cols-[11rem_1.05fr_0.95fr] xl:gap-8"
+        >
+          <div class="space-y-3">
+            <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-blue)]">
+              {{ course.category }}
+            </p>
+            <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+              {{ course.duration }}
+            </p>
+            <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+              {{ course.label }}
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-[1.45rem] font-semibold leading-[1.08] tracking-[-0.05em] text-[var(--sr-heading)]">
+              {{ course.title }}
+            </h3>
+            <p class="mt-3 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[var(--sr-blue)]">
+              {{ course.audience }}
+            </p>
+            <p class="mt-4 max-w-[38rem] text-sm leading-7 text-[var(--sr-text-muted)]">{{ course.text }}</p>
+          </div>
+
+          <ul class="space-y-3">
+            @for (outcome of course.outcomes; track outcome) {
+              <li class="flex gap-3 text-sm leading-6 text-[var(--sr-text-muted)]">
+                <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--sr-blue)]"></span>
+                <span>{{ outcome }}</span>
+              </li>
+            }
+          </ul>
+        </article>
+      }
+    </div>
+  </div>
+</section>

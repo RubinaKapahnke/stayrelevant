@@ -1,0 +1,45 @@
+<section id="zielgruppen" class="sr-section">
+  <div class="sr-container grid gap-12 xl:grid-cols-[0.72fr_1.28fr] xl:items-start">
+    <div class="space-y-6 xl:sticky xl:top-28" srReveal srRevealFrom="left">
+      <app-section-heading
+        eyebrow="Für wen das gedacht ist"
+        title="Vier typische Ausgangslagen. Ein gemeinsames Ziel: relevant bleiben."
+        intro="Stay Relevant Academy ist so gebaut, dass Inhalte für unterschiedliche Kontexte präzise anschlussfähig werden."
+      />
+
+      <p class="max-w-[30rem] text-sm leading-7 text-[var(--sr-text-muted)]">
+        Der Zuschnitt verändert sich je nach Rolle. Die Grundlogik bleibt gleich:
+        weniger Trendgerede, mehr Orientierung, Anwendung und belastbarer Transfer.
+      </p>
+    </div>
+
+    <div class="border-t border-[var(--sr-border)]">
+      @for (audience of audiences(); track audience.title; let index = $index) {
+        <article
+          srReveal
+          [srRevealDelay]="index * 80"
+          class="grid gap-5 border-b border-[var(--sr-border)] py-7 lg:grid-cols-[5rem_14rem_1fr_0.92fr] lg:gap-8"
+        >
+          <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-blue)] lg:pt-1">
+            0{{ index + 1 }}
+          </p>
+
+          <h3 class="text-2xl font-semibold tracking-[-0.04em] text-[var(--sr-heading)]">
+            {{ audience.title }}
+          </h3>
+
+          <p class="max-w-[34rem] text-base leading-7 text-[var(--sr-text-muted)]">{{ audience.text }}</p>
+
+          <ul class="space-y-3 lg:border-l lg:border-[var(--sr-border)] lg:pl-6">
+            @for (need of audience.needs; track need) {
+              <li class="flex gap-3 text-sm leading-6 text-[var(--sr-text-muted)]">
+                <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--sr-blue)]"></span>
+                <span>{{ need }}</span>
+              </li>
+            }
+          </ul>
+        </article>
+      }
+    </div>
+  </div>
+</section>
