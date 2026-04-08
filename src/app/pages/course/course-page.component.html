@@ -43,6 +43,24 @@
             </p>
 
             <div class="mt-6 space-y-6">
+              @if (schedule(); as courseSchedule) {
+                <div class="border-b border-[var(--sr-border)] pb-5">
+                  <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+                    Aktuelle Kursstarts
+                  </p>
+                  <div class="mt-3 flex flex-wrap gap-2">
+                    @for (label of scheduleLabels(); track label) {
+                      <span class="sr-chip !bg-transparent !text-[var(--sr-heading)]">
+                        {{ label }}
+                      </span>
+                    }
+                  </div>
+                  <p class="mt-3 text-xs leading-6 text-[var(--sr-text-muted)]">
+                    Stand: {{ scheduleUpdatedAt }}
+                  </p>
+                </div>
+              }
+
               @for (fact of course.facts; track fact.label) {
                 <div class="border-b border-[var(--sr-border)] pb-5 last:border-b-0 last:pb-0">
                   <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">

@@ -7,6 +7,10 @@ import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { catchError, distinctUntilChanged, map, of, startWith, switchMap } from 'rxjs';
 import { CourseLandingPageContent } from '../../content/course-landing-content';
+import {
+  COURSE_SCHEDULES_UPDATED_AT,
+  getCourseScheduleByTitle
+} from '../../content/course-schedule-content';
 import { PageShellComponent } from '../../shared/page-shell/page-shell.component';
 
 type CoursePageState =
@@ -56,6 +60,24 @@ export class CoursePageComponent {
   protected readonly isLoading = computed(() => this.state().status === 'loading');
 
   protected readonly isMissing = computed(() => this.state().status === 'missing');
+
+  protected readonly scheduleUpdatedAt = COURSE_SCHEDULES_UPDATED_AT;
+
+  protected readonly schedule = computed(() => getCourseScheduleByTitle(this.content()?.title));
+
+  protected readonly scheduleLabels = computed(() => {
+    const schedule = this.schedule();
+
+    if (!schedule) {
+      return [];
+    }
+
+    if (schedule.flexibleStart) {
+      return [schedule.flexibleStartLabel ?? 'Regelmaessiger Start'];
+    }
+
+    return schedule.starts.map((date) => (date.end ? `${date.start} bis ${date.end}` : date.start));
+  });
 
   protected readonly requestHref = computed(
     () => {

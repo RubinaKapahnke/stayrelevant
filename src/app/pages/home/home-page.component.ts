@@ -17,9 +17,11 @@ import {
   PROOF_CARDS,
   PROOF_STATS
 } from '../../content/home-content';
+import { COURSE_SCHEDULES } from '../../content/course-schedule-content';
 import { PageShellComponent } from '../../shared/page-shell/page-shell.component';
 import { AudienceSectionComponent } from '../../sections/audience/audience-section.component';
 import { ChallengeSectionComponent } from '../../sections/challenge/challenge-section.component';
+import { CourseDatesSectionComponent } from '../../sections/course-dates/course-dates-section.component';
 import { ContextStripSectionComponent } from '../../sections/context-strip/context-strip-section.component';
 import { CoursesSectionComponent } from '../../sections/courses/courses-section.component';
 import { CtaSectionComponent } from '../../sections/cta/cta-section.component';
@@ -171,6 +173,7 @@ const EXTRA_COURSES: CourseOffer[] = [
   imports: [
     AudienceSectionComponent,
     ChallengeSectionComponent,
+    CourseDatesSectionComponent,
     ContextStripSectionComponent,
     CoursesSectionComponent,
     CtaSectionComponent,
@@ -252,6 +255,7 @@ export class HomePageComponent {
   protected readonly pillars = HOME_PILLARS;
   protected readonly formats = FORMATS;
   protected readonly courses = [...COURSE_OFFERS, ...EXTRA_COURSES];
+  protected readonly courseSchedules = COURSE_SCHEDULES;
   protected readonly audiences = HOME_AUDIENCES;
   protected readonly differentiators = DIFFERENTIATORS;
   protected readonly comparisonRows = COMPARISON_ROWS;

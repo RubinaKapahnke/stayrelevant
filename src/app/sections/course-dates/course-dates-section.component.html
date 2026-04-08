@@ -1,0 +1,59 @@
+<section id="starttermine" class="sr-section bg-[rgba(255,255,255,0.46)]">
+  <div class="sr-container space-y-10">
+    <div class="grid gap-6 xl:grid-cols-[0.95fr_1.05fr] xl:items-end">
+      <app-section-heading
+        srReveal
+        eyebrow="Aktuelle Kursstarts"
+        title="Die naechsten Starttermine der aktuell geschalteten Kurse"
+        intro="Die Termine orientieren sich an den aktuell hinterlegten KURSNET-Schaltungen und werden bei neuen Exporten aktualisiert."
+      />
+
+      <div srReveal srRevealFrom="right" srRevealDelay="80ms">
+        <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
+          Stand
+        </p>
+        <p class="mt-4 text-lg leading-7 text-[var(--sr-heading)]">
+          Letzte Aktualisierung der Starttermine:
+          <span class="font-semibold">{{ updatedAt }}</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+      @for (schedule of cards(); track schedule.slug; let index = $index) {
+        <article
+          srReveal
+          [srRevealDelay]="(index % 6) * 50"
+          class="sr-panel rounded-[1.7rem] p-6 sm:p-7"
+        >
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-blue)]">
+                Kursstart
+              </p>
+              <h3 class="mt-4 text-[1.35rem] font-semibold leading-[1.08] tracking-[-0.05em] text-[var(--sr-heading)]">
+                {{ schedule.title }}
+              </h3>
+            </div>
+
+            <a
+              class="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[var(--sr-blue)]"
+              [routerLink]="['/kurse', schedule.slug]"
+            >
+              Details
+            </a>
+          </div>
+
+          <div class="mt-6 flex flex-wrap gap-2">
+            @for (label of schedule.labels; track label) {
+              <span class="sr-chip !bg-transparent !text-[var(--sr-heading)]">
+                {{ label }}
+              </span>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
