@@ -20,11 +20,10 @@ export class CourseDatesSectionComponent {
   protected readonly cards = computed<CourseScheduleCard[]>(() =>
     this.schedules().map((schedule) => ({
       ...schedule,
-      labels: schedule.flexibleStart
-        ? [schedule.flexibleStartLabel ?? 'Regelmäßiger Start']
-        : schedule.starts.map((date) =>
-            date.end ? `${date.start} bis ${date.end}` : date.start
-          )
+      labels:
+        schedule.starts.length > 0
+          ? schedule.starts.map((date) => (date.end ? `${date.start} bis ${date.end}` : date.start))
+          : [schedule.statusLabel ?? 'Coming soon']
     }))
   );
 }

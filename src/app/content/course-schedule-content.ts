@@ -1,3 +1,5 @@
+import { ALL_COURSE_OFFERS, courseSlugFromTitle } from './course-catalog-content';
+
 export interface CourseScheduleDate {
   start: string;
   end?: string;
@@ -6,19 +8,15 @@ export interface CourseScheduleDate {
 export interface CourseSchedule {
   title: string;
   slug: string;
-  flexibleStart?: boolean;
-  flexibleStartLabel?: string;
   starts: CourseScheduleDate[];
+  statusLabel?: string;
 }
 
-export const COURSE_SCHEDULES_UPDATED_AT = '08.04.2026';
-
-export const COURSE_SCHEDULES: CourseSchedule[] = [
+const EXPLICIT_COURSE_SCHEDULES: CourseSchedule[] = [
   {
     title: 'Agile Coaching mit KI in agilen Organisationen',
     slug: 'agile-coaching-mit-ki-in-agilen-organisationen',
-    flexibleStart: true,
-    flexibleStartLabel: 'Regelmäßiger Start möglich',
+    statusLabel: 'Regelmäßiger Start möglich',
     starts: []
   },
   {
@@ -66,6 +64,45 @@ export const COURSE_SCHEDULES: CourseSchedule[] = [
 function normalizeCourseTitle(title: string): string {
   return title.trim().replace(/\s+/g, ' ').toLowerCase();
 }
+
+function buildFallbackSchedule(title: string): CourseSchedule {
+  return {
+    title,
+    slug: courseSlugFromTitle(title),
+    starts: [],
+    statusLabel: 'Coming soon'
+  };
+}
+
+function compareSchedules(left: CourseSchedule, right: CourseSchedule): number {
+  const leftHasDates = left.starts.length > 0;
+  const rightHasDates = right.starts.length > 0;
+
+  if (leftHasDates !== rightHasDates) {
+    return leftHasDates ? -1 : 1;
+  }
+
+  if (left.statusLabel === 'Regelmäßiger Start möglich' && right.statusLabel !== 'Regelmäßiger Start möglich') {
+    return -1;
+  }
+
+  if (right.statusLabel === 'Regelmäßiger Start möglich' && left.statusLabel !== 'Regelmäßiger Start möglich') {
+    return 1;
+  }
+
+  return left.title.localeCompare(right.title, 'de');
+}
+
+export const COURSE_SCHEDULES: CourseSchedule[] = [...ALL_COURSE_OFFERS]
+  .map((course) => {
+    const explicitSchedule =
+      EXPLICIT_COURSE_SCHEDULES.find(
+        (schedule) => normalizeCourseTitle(schedule.title) === normalizeCourseTitle(course.title)
+      ) ?? null;
+
+    return explicitSchedule ?? buildFallbackSchedule(course.title);
+  })
+  .sort(compareSchedules);
 
 export function getCourseScheduleByTitle(title: string | null | undefined): CourseSchedule | null {
   if (!title) {

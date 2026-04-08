@@ -3,9 +3,9 @@
     <div class="grid gap-6 xl:items-end">
       <app-section-heading
         srReveal
-        eyebrow="Aktuelle Kursstarts"
-        title="Die nächsten Starttermine der aktuell geschalteten Kurse"
-        intro="Die Termine orientieren sich an den aktuell hinterlegten KURSNET-Schaltungen und werden bei neuen Exporten aktualisiert."
+        eyebrow="Kursstarts und Verfügbarkeit"
+        title="Starttermine und nächste Verfügbarkeit für das aktuelle Kursportfolio"
+        intro="Für bereits terminierte Kurse zeigen wir die nächsten Startdaten. Für alle übrigen Angebote bleibt der Kurs bis zum nächsten Termin mit Coming soon sichtbar."
       />
     </div>
 
@@ -14,12 +14,12 @@
         <article
           srReveal
           [srRevealDelay]="(index % 6) * 50"
-          class="sr-panel rounded-[1.7rem] p-6 sm:p-7"
-        >
+            class="sr-panel rounded-[1.7rem] p-6 sm:p-7"
+          >
           <div class="flex items-start justify-between gap-4">
             <div>
               <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-blue)]">
-                Kursstart
+                Verfügbarkeit
               </p>
               <h3 class="mt-4 text-[1.35rem] font-semibold leading-[1.08] tracking-[-0.05em] text-[var(--sr-heading)]">
                 {{ schedule.title }}

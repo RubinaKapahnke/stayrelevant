@@ -11,9 +11,7 @@ import {
   findCourseOfferBySlug
 } from '../../content/course-catalog-content';
 import { CourseLandingPageContent } from '../../content/course-landing-content';
-import {
-  getCourseScheduleByTitle
-} from '../../content/course-schedule-content';
+import { getCourseScheduleByTitle } from '../../content/course-schedule-content';
 import { PageShellComponent } from '../../shared/page-shell/page-shell.component';
 
 type CoursePageState =
@@ -85,20 +83,18 @@ export class CoursePageComponent {
       return [];
     }
 
-    if (schedule.flexibleStart) {
-      return [schedule.flexibleStartLabel ?? 'Regelmäßiger Start'];
+    if (schedule.starts.length > 0) {
+      return schedule.starts.map((date) => (date.end ? `${date.start} bis ${date.end}` : date.start));
     }
 
-    return schedule.starts.map((date) => (date.end ? `${date.start} bis ${date.end}` : date.start));
+    return [schedule.statusLabel ?? 'Coming soon'];
   });
 
-  protected readonly requestHref = computed(
-    () => {
-      const courseTitle = this.content()?.title ?? 'Weiterbildung bei Stay Relevant Academy';
+  protected readonly requestHref = computed(() => {
+    const courseTitle = this.content()?.title ?? 'Weiterbildung bei Stay Relevant Academy';
 
-      return `/?art=kursanfrage&kurs=${encodeURIComponent(courseTitle)}&anfrage=${encodeURIComponent(`Kursanfrage: ${courseTitle}`)}#kontakt`;
-    }
-  );
+    return `/?art=kursanfrage&kurs=${encodeURIComponent(courseTitle)}&anfrage=${encodeURIComponent(`Kursanfrage: ${courseTitle}`)}#kontakt`;
+  });
 
   constructor() {
     effect(() => {
