@@ -11,6 +11,4 @@ import { CoursesSectionComponent } from '../../sections/courses/courses-section.
 })
 export class CourseOverviewPageComponent {
   protected readonly courses = ALL_COURSE_OFFERS;
-  protected readonly totalCourses = this.courses.length;
-  protected readonly totalCategories = new Set(this.courses.map((course) => course.category)).size;
 }

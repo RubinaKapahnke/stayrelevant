@@ -1,6 +1,6 @@
 <section id="kurse" class="sr-section">
-  <div class="sr-container space-y-8">
-    <div class="grid gap-8 xl:grid-cols-[0.82fr_1.18fr] xl:items-end">
+  <div class="sr-container space-y-6">
+    <div class="space-y-5">
       <app-section-heading
         srReveal
         eyebrow="Kursportfolio"
@@ -8,7 +8,7 @@
         intro="Das gesamte Portfolio wird in einer einheitlichen Ansicht dargestellt. Sie können nach Themenfeld, Verfügbarkeit und Begriffen filtern und direkt in die jeweilige Kursseite wechseln."
       />
 
-      <div srReveal srRevealFrom="right" srRevealDelay="100ms" class="space-y-4">
+      <div srReveal srRevealFrom="right" srRevealDelay="100ms" class="max-w-[42rem] space-y-3">
         <label class="block">
           <span class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
             Kurs suchen
@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <div srReveal srRevealDelay="80ms" class="space-y-5 border-t border-[var(--sr-border)] pt-8">
+    <div srReveal srRevealDelay="80ms" class="space-y-4 border-t border-[var(--sr-border)] pt-6">
       <div class="space-y-3">
         <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
           Themenfelder
@@ -80,12 +80,12 @@
     </div>
 
     @if (filteredCourses().length) {
-      <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+      <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         @for (course of filteredCourses(); track course.title; let index = $index) {
           <article
             srReveal
             [srRevealDelay]="(index % 6) * 40"
-            class="sr-panel flex h-full flex-col rounded-[1.7rem] p-6 sm:p-7"
+            class="sr-panel flex h-full flex-col rounded-[1.7rem] p-5 sm:p-6"
           >
             <div class="flex flex-wrap items-start justify-between gap-3">
               <div class="flex flex-wrap gap-2">
