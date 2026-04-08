@@ -4,8 +4,6 @@ import {
   AudienceCard,
   CHALLENGE_CONTENT,
   COMPARISON_ROWS,
-  COURSE_OFFERS,
-  CourseOffer,
   DIFFERENTIATORS,
   FAQ_ITEMS,
   FORMATS,
@@ -17,6 +15,7 @@ import {
   PROOF_CARDS,
   PROOF_STATS
 } from '../../content/home-content';
+import { ALL_COURSE_OFFERS } from '../../content/course-catalog-content';
 import { COURSE_SCHEDULES } from '../../content/course-schedule-content';
 import { PageShellComponent } from '../../shared/page-shell/page-shell.component';
 import { AudienceSectionComponent } from '../../sections/audience/audience-section.component';
@@ -94,79 +93,6 @@ const HOME_AUDIENCES: AudienceCard[] = AUDIENCES.map((audience) =>
       }
     : audience
 );
-
-const EXTRA_COURSES: CourseOffer[] = [
-  {
-    category: 'Transformation',
-    label: 'Kultur & Organisation',
-    title: 'Systemische Kulturentwicklung',
-    duration: '4 Wochen',
-    audience: 'Für People, Führung, OE und Transformation',
-    text: 'Ein Kurs für Menschen, die Kultur nicht als Kampagne, sondern als Ergebnis von Strukturen, Führungsverhalten, Ritualen und Entscheidungen verstehen wollen. Im Mittelpunkt steht, wie kulturelle Muster unter Veränderungsdruck sichtbar werden und wie systemische Kulturentwicklung konkret ansetzen kann.',
-    outcomes: [
-      'Kultur im Zusammenspiel mit Struktur, Führung und Routinen betrachten',
-      'systemische Muster und wiederkehrende Spannungen erkennen',
-      'wirksame Hebel für Kulturentwicklung im Alltag ableiten',
-      'Kulturarbeit mit Veränderung und Zukunftsrobustheit verbinden'
-    ]
-  },
-  {
-    category: 'Transformation',
-    label: 'Agile Prinzipien',
-    title: 'Agile Prinzipien in der Praxis',
-    duration: '2 Wochen',
-    audience: 'Für Teams, Führung und Projektkontexte',
-    text: 'Ein Kurs für Menschen, die agile Prinzipien jenseits von Ritualen und Methoden verstehen und in realer Zusammenarbeit anwenden wollen. Es geht um Feedback, Transparenz, kurze Lernzyklen, klare Priorisierung und den Umgang mit Unsicherheit.',
-    outcomes: [
-      'agile Prinzipien von Tool- und Framework-Denken unterscheiden',
-      'Lernzyklen, Priorisierung und Transparenz im Alltag verbessern',
-      'Scrum, Kanban oder OKR auf gemeinsame Prinzipien zurückführen',
-      'agile Zusammenarbeit in realen Teamkontexten robuster gestalten'
-    ]
-  },
-  {
-    category: 'People',
-    label: 'Teams & Zusammenarbeit',
-    title: 'Dynamikresiliente Teams entwickeln',
-    duration: '3 Wochen',
-    audience: 'Für Führung, Teamleads und People-Verantwortliche',
-    text: 'Ein Kurs für Menschen, die Teams so aufstellen wollen, dass sie unter Unsicherheit nicht in Aktionismus, Lähmung oder Verantwortungsdiffusion kippen. Im Mittelpunkt stehen psychologische Sicherheit, klare Entscheidungslogik, Selbstorganisation und belastbare Zusammenarbeit.',
-    outcomes: [
-      'Teamdynamiken unter Druck besser lesen',
-      'Selbstorganisation mit klaren Rollen und Leitplanken verbinden',
-      'Verantwortungsdiffusion und stillen Rückzug früh erkennen',
-      'Teams in volatilen Kontexten arbeitsfähig halten'
-    ]
-  },
-  {
-    category: 'Leadership',
-    label: 'Entscheidung & Führung',
-    title: 'Ambiguitätsresilienz und Entscheiden unter Unsicherheit',
-    duration: '2 Wochen',
-    audience: 'Für Führung, Projektverantwortliche und Schnittstellenrollen',
-    text: 'Ein Kurs für Menschen, die in mehrdeutigen Situationen entscheiden müssen, ohne auf Scheinsicherheit oder Daueranalyse auszuweichen. Ambiguitätsresilienz bedeutet hier, Widersprüche auszuhalten, Hypothesen zu bilden und trotzdem handlungsfähig zu bleiben.',
-    outcomes: [
-      'Ambiguität von Komplexität und Chaos unterscheiden',
-      'unter Unsicherheit strukturierter entscheiden',
-      'Spannungen, Zielkonflikte und unvollständige Informationen besser bearbeiten',
-      'Ruhe, Urteilskraft und Handlungsfähigkeit im Wandel stärken'
-    ]
-  },
-  {
-    category: 'People',
-    label: 'Ownership & Zusammenarbeit',
-    title: 'Verantwortungsdiffusion vermeiden',
-    duration: '2 Wochen',
-    audience: 'Für Führung, Teams und funktionsübergreifende Zusammenarbeit',
-    text: 'Ein Kurs für Organisationen und Teams, in denen vieles wichtig ist, aber zu vieles zwischen Rollen, Gremien und Schnittstellen hängen bleibt. Im Mittelpunkt stehen Ownership, klare Zuständigkeiten, gute Übergaben und verlässliche Entscheidungsmechaniken.',
-    outcomes: [
-      'unklare Verantwortungen sichtbar machen',
-      'Ownership, Delegation und Entscheidungsrechte sauber klären',
-      'Schnittstellen und Übergaben robuster gestalten',
-      'Verantwortung im Team und zwischen Bereichen verbindlicher machen'
-    ]
-  }
-];
 
 @Component({
   selector: 'app-home-page',
@@ -254,7 +180,7 @@ export class HomePageComponent {
   };
   protected readonly pillars = HOME_PILLARS;
   protected readonly formats = FORMATS;
-  protected readonly courses = [...COURSE_OFFERS, ...EXTRA_COURSES];
+  protected readonly courses = ALL_COURSE_OFFERS;
   protected readonly courseSchedules = COURSE_SCHEDULES;
   protected readonly audiences = HOME_AUDIENCES;
   protected readonly differentiators = DIFFERENTIATORS;

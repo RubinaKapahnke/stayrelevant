@@ -1,4 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, input, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { courseSlugFromTitle } from '../../content/course-catalog-content';
 import { CourseOffer } from '../../content/home-content';
 import { RevealOnScrollDirective } from '../../shared/reveal-on-scroll/reveal-on-scroll.directive';
 import { SectionHeadingComponent } from '../../shared/section-heading/section-heading.component';
@@ -10,7 +12,7 @@ interface CourseCategoryFilter {
 
 @Component({
   selector: 'app-courses-section',
-  imports: [SectionHeadingComponent, RevealOnScrollDirective],
+  imports: [RouterLink, SectionHeadingComponent, RevealOnScrollDirective],
   templateUrl: './courses-section.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
@@ -81,5 +83,9 @@ export class CoursesSectionComponent {
       left: scrollAmount * direction,
       behavior: 'smooth'
     });
+  }
+
+  protected courseSlug(course: CourseOffer): string {
+    return courseSlugFromTitle(course.title);
   }
 }

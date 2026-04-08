@@ -175,7 +175,8 @@ export const FOOTER_NAV_ITEMS: NavItem[] = [
   { label: 'Lernfelder', href: '/#lernfelder' },
   { label: 'Zielgruppen', href: '/#zielgruppen' },
   { label: 'Formate', href: '/#angebote' },
-  { label: 'Kurse', href: '/#kurse' },
+  { label: 'Kurse', href: '/kurse' },
+  { label: 'Aktuelle Starts', href: '/#starttermine' },
   { label: 'FAQ', href: '/#faq' }
 ];
 

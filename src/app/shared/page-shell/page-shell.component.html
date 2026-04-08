@@ -8,12 +8,43 @@
       @if (mode() === 'home') {
         <nav class="hidden items-center gap-7 lg:flex" aria-label="Hauptnavigation">
           @for (item of headerNavItems; track item.label) {
-            <a
-              [href]="item.href"
-              class="text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-[var(--sr-text-muted)] transition hover:text-[var(--sr-blue)]"
-            >
-              {{ item.label }}
-            </a>
+            @if (item.label === 'Kurse') {
+              <div class="sr-nav-item">
+                <a
+                  [href]="item.href"
+                  class="text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-[var(--sr-text-muted)] transition hover:text-[var(--sr-blue)]"
+                >
+                  {{ item.label }}
+                </a>
+
+                <div class="sr-nav-submenu">
+                  @for (subItem of courseSubmenuItems; track subItem.label) {
+                    @if (subItem.href === '/kurse') {
+                      <a
+                        routerLink="/kurse"
+                        class="sr-nav-submenu__link"
+                      >
+                        {{ subItem.label }}
+                      </a>
+                    } @else {
+                      <a
+                        [href]="subItem.href"
+                        class="sr-nav-submenu__link"
+                      >
+                        {{ subItem.label }}
+                      </a>
+                    }
+                  }
+                </div>
+              </div>
+            } @else {
+              <a
+                [href]="item.href"
+                class="text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-[var(--sr-text-muted)] transition hover:text-[var(--sr-blue)]"
+              >
+                {{ item.label }}
+              </a>
+            }
           }
         </nav>
 
@@ -21,7 +52,7 @@
           <a
             mat-stroked-button
             class="sr-button sr-button-secondary"
-            href="#kurse"
+            routerLink="/kurse"
           >
             Kursportfolio
           </a>
@@ -73,13 +104,45 @@
         <div id="mobile-navigation" class="sr-mobile-menu" aria-label="Mobile Navigation">
           <nav class="space-y-2" aria-label="Hauptnavigation mobil">
             @for (item of headerNavItems; track item.label) {
-              <a
-                [href]="item.href"
-                class="sr-mobile-menu__link"
-                (click)="closeMobileMenu()"
-              >
-                {{ item.label }}
-              </a>
+              @if (item.label === 'Kurse') {
+                <a
+                  [href]="item.href"
+                  class="sr-mobile-menu__link"
+                  (click)="closeMobileMenu()"
+                >
+                  {{ item.label }}
+                </a>
+
+                <div class="sr-mobile-submenu">
+                  @for (subItem of courseSubmenuItems; track subItem.label) {
+                    @if (subItem.href === '/kurse') {
+                      <a
+                        routerLink="/kurse"
+                        class="sr-mobile-submenu__link"
+                        (click)="closeMobileMenu()"
+                      >
+                        {{ subItem.label }}
+                      </a>
+                    } @else {
+                      <a
+                        [href]="subItem.href"
+                        class="sr-mobile-submenu__link"
+                        (click)="closeMobileMenu()"
+                      >
+                        {{ subItem.label }}
+                      </a>
+                    }
+                  }
+                </div>
+              } @else {
+                <a
+                  [href]="item.href"
+                  class="sr-mobile-menu__link"
+                  (click)="closeMobileMenu()"
+                >
+                  {{ item.label }}
+                </a>
+              }
             }
           </nav>
 
@@ -87,7 +150,7 @@
             <a
               mat-stroked-button
               class="sr-button sr-button-secondary"
-              href="#kurse"
+              routerLink="/kurse"
               (click)="closeMobileMenu()"
             >
               Kursportfolio

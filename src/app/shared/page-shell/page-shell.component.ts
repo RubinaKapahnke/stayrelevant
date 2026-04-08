@@ -9,6 +9,7 @@ import {
   CONTACT_PHONE_HREF,
   FOOTER_NAV_ITEMS,
   HEADER_NAV_ITEMS,
+  NavItem,
   SOCIAL_LINKS
 } from '../../content/home-content';
 import { BrandMarkComponent } from '../brand-mark/brand-mark.component';
@@ -25,6 +26,11 @@ export class PageShellComponent {
 
   protected readonly headerNavItems = HEADER_NAV_ITEMS;
   protected readonly footerNavItems = FOOTER_NAV_ITEMS;
+  protected readonly courseSubmenuItems: NavItem[] = [
+    { label: 'Kursübersicht', href: '/kurse' },
+    { label: 'Aktuelle Starts', href: '/#starttermine' },
+    { label: 'Portfolio auf Startseite', href: '/#kurse' }
+  ];
   protected readonly socialLinks = SOCIAL_LINKS;
   protected readonly contactEmail = CONTACT_EMAIL;
   protected readonly contactEmailHref = CONTACT_EMAIL_HREF;

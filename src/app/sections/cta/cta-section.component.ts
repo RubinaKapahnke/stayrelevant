@@ -10,6 +10,7 @@ import {
   CONTACT_PHONE_DISPLAY,
   CONTACT_PHONE_HREF
 } from '../../content/home-content';
+import { ALL_COURSE_OPTIONS } from '../../content/course-catalog-content';
 import { RevealOnScrollDirective } from '../../shared/reveal-on-scroll/reveal-on-scroll.directive';
 
 type InquiryType = 'kursanfrage' | 'inhouse-programm' | 'beratung' | 'rueckruf' | 'sonstiges';
@@ -32,36 +33,7 @@ const INQUIRY_OPTIONS: SelectOption<InquiryType>[] = [
   { value: 'sonstiges', label: 'Sonstiges' }
 ];
 
-const COURSE_OPTIONS: SelectOption<string>[] = [
-  {
-    value: 'Agiles Projektmanagement mit KI und Scrum',
-    label: 'Agiles Projektmanagement mit KI und Scrum'
-  },
-  {
-    value: 'Product Owner, Scrum und Kanban im agilen Projektmanagement',
-    label: 'Product Owner, Scrum und Kanban im agilen Projektmanagement'
-  },
-  {
-    value: 'Product Ownership, Backlog Management und KI in Scrum',
-    label: 'Product Ownership, Backlog Management und KI in Scrum'
-  },
-  {
-    value: 'Agiles Projektmanagement und Grundlagen des Projektmanagements mit Scrum und KI',
-    label: 'Agiles Projektmanagement und Grundlagen des Projektmanagements mit Scrum und KI'
-  },
-  {
-    value: 'Prompt Engineering mit agilem Projektmanagement und Scrum',
-    label: 'Prompt Engineering mit agilem Projektmanagement und Scrum'
-  },
-  {
-    value: 'Agile Coaching mit KI in agilen Organisationen',
-    label: 'Agile Coaching mit KI in agilen Organisationen'
-  },
-  {
-    value: 'KI im Assistenz- und Office-Management',
-    label: 'KI im Assistenz- und Office-Management'
-  }
-];
+const COURSE_OPTIONS: SelectOption<string>[] = ALL_COURSE_OPTIONS;
 
 @Component({
   selector: 'app-cta-section',

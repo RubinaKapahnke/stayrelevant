@@ -6,6 +6,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { catchError, distinctUntilChanged, map, of, startWith, switchMap } from 'rxjs';
+import {
+  buildCourseLandingPageFromOffer,
+  findCourseOfferBySlug
+} from '../../content/course-catalog-content';
 import { CourseLandingPageContent } from '../../content/course-landing-content';
 import {
   COURSE_SCHEDULES_UPDATED_AT,
@@ -39,7 +43,19 @@ export class CoursePageComponent {
         this.http.get<CourseLandingPageContent>(`/courses/${slug}.json`).pipe(
           map((content) => ({ status: 'ready' as const, slug, content })),
           startWith({ status: 'loading' as const, slug }),
-          catchError(() => of({ status: 'missing' as const, slug }))
+          catchError(() => {
+            const courseOffer = findCourseOfferBySlug(slug);
+
+            return of(
+              courseOffer
+                ? {
+                    status: 'ready' as const,
+                    slug,
+                    content: buildCourseLandingPageFromOffer(courseOffer)
+                  }
+                : { status: 'missing' as const, slug }
+            );
+          })
         )
       )
     ),

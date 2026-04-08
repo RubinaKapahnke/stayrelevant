@@ -1,0 +1,20 @@
+<app-page-shell mode="simple">
+  <section class="sr-section pb-10">
+    <div class="sr-container space-y-6">
+      <span class="sr-kicker">Kursübersicht</span>
+      <h1 class="sr-balance text-4xl font-semibold tracking-[-0.06em] text-[var(--sr-heading)] sm:text-5xl">
+        Alle Kurse auf einen Blick
+      </h1>
+      <p class="max-w-[48rem] text-lg leading-8 text-[var(--sr-text-muted)]">
+        Diese Übersicht bündelt das gesamte aktuelle Kursportfolio mit direkten Links auf die jeweilige Landing-Page. So lassen sich Themenfelder, Formate und Schwerpunkte schneller vergleichen.
+      </p>
+      <div class="flex flex-wrap gap-2">
+        <span class="sr-chip">{{ totalCourses }} Kurse</span>
+        <span class="sr-chip">{{ totalCategories }} Themenfelder</span>
+        <span class="sr-chip">Direkte Landing-Pages</span>
+      </div>
+    </div>
+  </section>
+
+  <app-courses-section [courses]="courses" />
+</app-page-shell>
