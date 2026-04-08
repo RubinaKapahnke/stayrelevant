@@ -7,7 +7,7 @@ import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { catchError, distinctUntilChanged, map, of, startWith, switchMap } from 'rxjs';
 import {
-  buildCourseLandingPageFromOffer,
+  buildDetailedCourseLandingPageFromOffer,
   findCourseOfferBySlug
 } from '../../content/course-catalog-content';
 import { CourseLandingPageContent } from '../../content/course-landing-content';
@@ -48,7 +48,7 @@ export class CoursePageComponent {
                 ? {
                     status: 'ready' as const,
                     slug,
-                    content: buildCourseLandingPageFromOffer(courseOffer)
+                    content: buildDetailedCourseLandingPageFromOffer(courseOffer)
                   }
                 : { status: 'missing' as const, slug }
             );
