@@ -38,6 +38,10 @@ const COURSE_OPTIONS: SelectOption<string>[] = [
     label: 'Agiles Projektmanagement mit KI und Scrum'
   },
   {
+    value: 'Product Owner, Scrum und Kanban im agilen Projektmanagement',
+    label: 'Product Owner, Scrum und Kanban im agilen Projektmanagement'
+  },
+  {
     value: 'Product Ownership, Backlog Management und KI in Scrum',
     label: 'Product Ownership, Backlog Management und KI in Scrum'
   },

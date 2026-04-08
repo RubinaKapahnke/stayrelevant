@@ -1,0 +1,93 @@
+{
+  "title": "Product Owner, Scrum und Kanban im agilen Projektmanagement",
+  "lead": "Diese Weiterbildung vermittelt fundierte Kompetenzen in Product Ownership, Scrum, Kanban und agilem Projektmanagement. Im Fokus stehen Produktverantwortung, Priorisierung, Backlog Management, Wertorientierung sowie die praktische Verbindung von Scrum und Kanban im modernen Projektalltag.",
+  "metaTitle": "Product Owner, Scrum und Kanban im agilen Projektmanagement | Stay Relevant Academy",
+  "metaDescription": "Weiterbildung zu Product Ownership, Scrum und Kanban im agilen Projektmanagement mit Fokus auf Backlog Management, Priorisierung, Skalierung und Vorbereitung auf Scrum.org Zertifizierungen.",
+  "chips": [
+    "Product Ownership",
+    "Scrum",
+    "Kanban",
+    "Agiles Projektmanagement",
+    "Scrum.org Vorbereitung"
+  ],
+  "facts": [
+    {
+      "label": "Bildungsart",
+      "value": "Fortbildung/Qualifizierung"
+    },
+    {
+      "label": "Schulart",
+      "value": "Berufsbildende Schule/Einrichtung"
+    },
+    {
+      "label": "Zielgruppe",
+      "value": "Product Owner, Scrum Master und Teams im agilen Projektmanagement."
+    },
+    {
+      "label": "Zugang",
+      "value": "Grundkenntnisse im Projektmanagement sowie grundlegende PC- und Internetkenntnisse sind hilfreich."
+    },
+    {
+      "label": "Abschluss",
+      "value": "Teilnahmebescheinigung"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Product Ownership und Scrum im Projektalltag",
+      "intro": "Die Weiterbildung vermittelt ein fundiertes Verständnis für Product Ownership, das Scrum Framework und die Rolle des Product Owners im agilen Projektmanagement.",
+      "bullets": [
+        "Rolle des Product Owners im agilen Arbeiten und im modernen Projektmanagement",
+        "Scrum Grundlagen und Scrum Framework im agilen Projektmanagement",
+        "Zusammenarbeit zwischen Product Owner, Scrum Master und Entwicklungsteam",
+        "Produktverantwortung, Priorisierung und Wertorientierung im Produktmanagement"
+      ]
+    },
+    {
+      "title": "Backlog Management, Anforderungen und Priorisierung",
+      "intro": "Ein weiterer Schwerpunkt liegt auf der strukturierten Steuerung von Anforderungen und der Priorisierung im Product Backlog.",
+      "bullets": [
+        "Anforderungen strukturieren und im Product Backlog steuern",
+        "Backlog Management und Priorisierung im agilen Projektmanagement",
+        "Sprint Planung, Review und Anpassung aus Sicht des Product Owners",
+        "Produktvision, Produktstrategie und Wertorientierung im Produktmanagement"
+      ]
+    },
+    {
+      "title": "Kanban, Arbeitsfluss und Skalierung",
+      "intro": "Die Teilnehmenden lernen, Scrum und Kanban wirksam zu verbinden und Arbeitsflüsse im Team gezielt sichtbar und verbesserbar zu machen.",
+      "bullets": [
+        "Kanban Methode und Visualisierung von Arbeitsprozessen",
+        "Integration von Scrum und Kanban im Projektmanagement",
+        "Kontinuierliche Verbesserung und Einsatz von Metriken im Team",
+        "Skalierung von Scrum und Arbeiten in größeren Strukturen"
+      ]
+    },
+    {
+      "title": "Praxisorientiertes Lernen und Kompetenzaufbau",
+      "body": [
+        "Praxisorientiertes Lernen ist ein zentraler Bestandteil dieser Weiterbildung. Theoretische Inhalte werden direkt im agilen Projektmanagement angewendet, um nachhaltige Kompetenzen in Scrum, Kanban und Produktmanagement aufzubauen.",
+        "Die Weiterbildung stärkt damit sowohl methodische Sicherheit als auch die Fähigkeit, agile Arbeitsweisen im Projektalltag wirksam zu strukturieren, zu priorisieren und kontinuierlich weiterzuentwickeln."
+      ]
+    },
+    {
+      "title": "Ziele und Kompetenzen",
+      "bullets": [
+        "Fundierte Kompetenzen im Product Ownership und im agilen Produktmanagement entwickeln",
+        "Scrum, Kanban und agile Methoden im Projektmanagement sicher anwenden",
+        "Anforderungen im Product Backlog steuern und Prioritäten im Produktmanagement setzen",
+        "Skalierung im agilen Projektmanagement und deren Auswirkungen auf Teams verstehen",
+        "Arbeitsflüsse mit Kanban analysieren und optimieren",
+        "Zusammenarbeit zwischen Product Owner, Scrum Master und Team stärken",
+        "Kontinuierliche Verbesserung im agilen Projektmanagement umsetzen"
+      ]
+    },
+    {
+      "title": "Vorbereitung auf externe Abschlüsse",
+      "body": [
+        "Die Weiterbildung unterstützt die Vorbereitung auf externe Zertifizierungen von Scrum.org, insbesondere Professional Scrum Master I, Scaled Professional Scrum, Professional Scrum with Kanban sowie Professional Scrum Product Owner I.",
+        "Damit eignet sich der Kurs sowohl für die praktische Weiterentwicklung im agilen Projektmanagement als auch für den strukturierten Kompetenzaufbau mit Blick auf externe Abschlüsse."
+      ]
+    }
+  ]
+}
