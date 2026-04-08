@@ -68,14 +68,40 @@
         novalidate
       >
         <div class="grid gap-5 sm:grid-cols-2">
+          <label class="grid gap-2 text-left">
+            <span class="text-sm font-semibold text-white/84">Anfrageart</span>
+            <select class="sr-contact-input" formControlName="requestType">
+              @for (option of inquiryOptions; track option.value) {
+                <option [value]="option.value">{{ option.label }}</option>
+              }
+            </select>
+          </label>
+
+          @if (contactForm.controls.requestType.value === 'kursanfrage') {
+            <label class="grid gap-2 text-left">
+              <span class="text-sm font-semibold text-white/84">Kurs</span>
+              <select class="sr-contact-input" formControlName="course">
+                <option value="">Bitte Kurs auswählen</option>
+                @for (course of courseOptions; track course.value) {
+                  <option [value]="course.value">{{ course.label }}</option>
+                }
+              </select>
+              @if (hasError('course', 'required')) {
+                <span class="sr-contact-error">Bitte wählen Sie einen Kurs aus.</span>
+              }
+            </label>
+          } @else {
+            <div class="hidden sm:block"></div>
+          }
+
           <label class="grid gap-2 text-left sm:col-span-2">
-            <span class="text-sm font-semibold text-white/84">Thema Ihrer Anfrage</span>
+            <span class="text-sm font-semibold text-white/84">Betreff / Thema</span>
             <input
               class="sr-contact-input"
               type="text"
               formControlName="topic"
               autocomplete="off"
-              placeholder="z. B. Kursanfrage, Inhouse-Programm oder Rückruf"
+              placeholder="Kurzes Thema Ihrer Anfrage"
             />
             @if (hasError('topic', 'required')) {
               <span class="sr-contact-error">Bitte geben Sie ein Thema an.</span>

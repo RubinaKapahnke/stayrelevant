@@ -284,6 +284,10 @@ section[id] {
   color: rgba(255, 255, 255, 0.38);
 }
 
+.sr-contact-input option {
+  color: var(--sr-heading);
+}
+
 .sr-contact-input:hover {
   border-color: rgba(255, 255, 255, 0.22);
 }

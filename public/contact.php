@@ -21,6 +21,8 @@ if (!is_array($data)) {
 }
 
 $topic = trim((string)($data['topic'] ?? ''));
+$requestType = trim((string)($data['requestType'] ?? ''));
+$course = trim((string)($data['course'] ?? ''));
 $name = trim((string)($data['name'] ?? ''));
 $email = trim((string)($data['email'] ?? ''));
 $phone = trim((string)($data['phone'] ?? ''));
@@ -33,6 +35,32 @@ if ($website !== '') {
     echo json_encode([
         'ok' => true,
         'message' => 'Vielen Dank. Ihre Anfrage wurde versendet.'
+    ]);
+    exit;
+}
+
+$requestTypeLabels = [
+    'kursanfrage' => 'Kursanfrage',
+    'inhouse-programm' => 'Inhouse-Programm',
+    'beratung' => 'Beratung',
+    'rueckruf' => 'Rückruf',
+    'sonstiges' => 'Sonstiges'
+];
+
+if (!array_key_exists($requestType, $requestTypeLabels)) {
+    http_response_code(422);
+    echo json_encode([
+        'ok' => false,
+        'message' => 'Bitte wählen Sie eine gültige Anfrageart aus.'
+    ]);
+    exit;
+}
+
+if ($requestType === 'kursanfrage' && $course === '') {
+    http_response_code(422);
+    echo json_encode([
+        'ok' => false,
+        'message' => 'Bitte wählen Sie einen Kurs aus.'
     ]);
     exit;
 }
@@ -60,6 +88,8 @@ $subject = sprintf('Kontaktanfrage Website: %s', $topic);
 $bodyLines = [
     'Neue Anfrage über das Kontaktformular von stayrelevant-academy.de',
     '',
+    'Anfrageart: ' . $requestTypeLabels[$requestType],
+    'Kurs: ' . ($course !== '' ? $course : 'nicht ausgewählt'),
     'Thema: ' . $topic,
     'Name: ' . $name,
     'E-Mail: ' . $email,

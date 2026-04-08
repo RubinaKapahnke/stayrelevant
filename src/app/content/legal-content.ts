@@ -81,7 +81,7 @@ export const LEGAL_PAGES = {
         title: 'Kontaktaufnahme',
         body: [
           'Wenn Sie uns per E-Mail oder über das Kontaktformular kontaktieren, verarbeiten wir die von Ihnen übermittelten Angaben ausschließlich zur Bearbeitung Ihrer Anfrage und für mögliche Anschlusskommunikation.',
-          'Bei Nutzung des Kontaktformulars verarbeiten wir insbesondere Thema der Anfrage, Name, E-Mail-Adresse, optionale Organisations- oder Telefondaten sowie den Inhalt Ihrer Nachricht.',
+          'Bei Nutzung des Kontaktformulars verarbeiten wir insbesondere Anfrageart, gegebenenfalls den ausgewählten Kurs, Thema der Anfrage, Name, E-Mail-Adresse, optionale Organisations- oder Telefondaten sowie den Inhalt Ihrer Nachricht.',
           'Die Formulardaten werden über unseren eigenen Hosting-Server verarbeitet und per E-Mail an uns übermittelt. Es wird derzeit kein externer Formular-Dienst eingesetzt.',
           'Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO bei vertragsbezogenen Anfragen sowie Art. 6 Abs. 1 lit. f DSGVO bei sonstigen Anfragen.',
           'Die Angaben werden nur so lange gespeichert oder in E-Mail-Postfächern vorgehalten, wie dies zur Bearbeitung Ihrer Anfrage und für eventuelle Anschlusskommunikation erforderlich ist.'

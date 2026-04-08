@@ -61,7 +61,7 @@ export class CoursePageComponent {
     () => {
       const courseTitle = this.content()?.title ?? 'Weiterbildung bei Stay Relevant Academy';
 
-      return `/?anfrage=${encodeURIComponent(`Kursanfrage: ${courseTitle}`)}#kontakt`;
+      return `/?art=kursanfrage&kurs=${encodeURIComponent(courseTitle)}&anfrage=${encodeURIComponent(`Kursanfrage: ${courseTitle}`)}#kontakt`;
     }
   );
 

@@ -1,6 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject, signal } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import {
@@ -11,10 +12,52 @@ import {
 } from '../../content/home-content';
 import { RevealOnScrollDirective } from '../../shared/reveal-on-scroll/reveal-on-scroll.directive';
 
+type InquiryType = 'kursanfrage' | 'inhouse-programm' | 'beratung' | 'rueckruf' | 'sonstiges';
+
 interface ContactFormResponse {
   ok: boolean;
   message?: string;
 }
+
+interface SelectOption<T extends string> {
+  value: T;
+  label: string;
+}
+
+const INQUIRY_OPTIONS: SelectOption<InquiryType>[] = [
+  { value: 'kursanfrage', label: 'Kursanfrage' },
+  { value: 'inhouse-programm', label: 'Inhouse-Programm' },
+  { value: 'beratung', label: 'Beratung' },
+  { value: 'rueckruf', label: 'Rückruf' },
+  { value: 'sonstiges', label: 'Sonstiges' }
+];
+
+const COURSE_OPTIONS: SelectOption<string>[] = [
+  {
+    value: 'Agiles Projektmanagement mit KI und Scrum',
+    label: 'Agiles Projektmanagement mit KI und Scrum'
+  },
+  {
+    value: 'Product Ownership, Backlog Management und KI in Scrum',
+    label: 'Product Ownership, Backlog Management und KI in Scrum'
+  },
+  {
+    value: 'Agiles Projektmanagement und Grundlagen des Projektmanagements mit Scrum und KI',
+    label: 'Agiles Projektmanagement und Grundlagen des Projektmanagements mit Scrum und KI'
+  },
+  {
+    value: 'Prompt Engineering mit agilem Projektmanagement und Scrum',
+    label: 'Prompt Engineering mit agilem Projektmanagement und Scrum'
+  },
+  {
+    value: 'Agile Coaching mit KI in agilen Organisationen',
+    label: 'Agile Coaching mit KI in agilen Organisationen'
+  },
+  {
+    value: 'KI im Assistenz- und Office-Management',
+    label: 'KI im Assistenz- und Office-Management'
+  }
+];
 
 @Component({
   selector: 'app-cta-section',
@@ -26,8 +69,13 @@ export class CtaSectionComponent {
   private readonly formBuilder = inject(NonNullableFormBuilder);
   private readonly http = inject(HttpClient);
   private readonly document = inject(DOCUMENT);
+  private readonly destroyRef = inject(DestroyRef);
+  private readonly searchParams = new URLSearchParams(this.document.location.search);
+  private readonly prefilledRequestType = this.getPrefilledRequestType();
+  private readonly prefilledCourse = this.searchParams.get('kurs') ?? '';
   private readonly prefilledTopic =
-    new URLSearchParams(this.document.location.search).get('anfrage') ?? '';
+    this.searchParams.get('anfrage') ??
+    this.buildPrefilledTopic(this.prefilledRequestType, this.prefilledCourse);
 
   protected readonly submitState = signal<'idle' | 'sending' | 'success' | 'error'>('idle');
   protected readonly responseMessage = signal('');
@@ -36,8 +84,12 @@ export class CtaSectionComponent {
   protected readonly contactPhoneDisplay = CONTACT_PHONE_DISPLAY;
   protected readonly contactPhoneHref = CONTACT_PHONE_HREF;
   protected readonly contactLocation = CONTACT_LOCATION;
+  protected readonly inquiryOptions = INQUIRY_OPTIONS;
+  protected readonly courseOptions = COURSE_OPTIONS;
 
   protected readonly contactForm = this.formBuilder.group({
+    requestType: [this.prefilledRequestType, [Validators.required]],
+    course: [this.prefilledCourse, [Validators.maxLength(180)]],
     topic: [this.prefilledTopic, [Validators.required, Validators.maxLength(140)]],
     name: ['', [Validators.required, Validators.maxLength(120)]],
     email: ['', [Validators.required, Validators.email, Validators.maxLength(160)]],
@@ -47,6 +99,16 @@ export class CtaSectionComponent {
     consent: [false, [Validators.requiredTrue]],
     website: ['']
   });
+
+  constructor() {
+    this.syncCourseValidators(this.contactForm.controls.requestType.value);
+
+    this.contactForm.controls.requestType.valueChanges
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe((requestType) => {
+        this.syncCourseValidators(requestType);
+      });
+  }
 
   protected submitForm(): void {
     if (this.contactForm.invalid) {
@@ -69,6 +131,8 @@ export class CtaSectionComponent {
         }
 
         this.contactForm.reset({
+          requestType: this.prefilledRequestType,
+          course: this.prefilledCourse,
           topic: this.prefilledTopic,
           name: '',
           email: '',
@@ -97,6 +161,8 @@ export class CtaSectionComponent {
 
   protected hasError(
     controlName:
+      | 'requestType'
+      | 'course'
       | 'topic'
       | 'name'
       | 'email'
@@ -110,5 +176,37 @@ export class CtaSectionComponent {
     const control = this.contactForm.controls[controlName];
 
     return !!control && control.touched && (!errorName ? control.invalid : control.hasError(errorName));
+  }
+
+  private getPrefilledRequestType(): InquiryType {
+    const requestType = this.searchParams.get('art');
+
+    return INQUIRY_OPTIONS.some((option) => option.value === requestType)
+      ? (requestType as InquiryType)
+      : 'beratung';
+  }
+
+  private buildPrefilledTopic(requestType: InquiryType, course: string): string {
+    if (requestType === 'kursanfrage' && course) {
+      return `Kursanfrage: ${course}`;
+    }
+
+    const option = INQUIRY_OPTIONS.find((entry) => entry.value === requestType);
+    return option?.label ?? 'Beratung';
+  }
+
+  private syncCourseValidators(requestType: InquiryType): void {
+    const courseControl = this.contactForm.controls.course;
+
+    if (requestType === 'kursanfrage') {
+      courseControl.setValidators([Validators.required, Validators.maxLength(180)]);
+    } else {
+      courseControl.clearValidators();
+      courseControl.setValue('', { emitEvent: false });
+      courseControl.markAsPristine();
+      courseControl.markAsUntouched();
+    }
+
+    courseControl.updateValueAndValidity({ emitEvent: false });
   }
 }
