@@ -1,0 +1,97 @@
+{
+  "title": "Agile Prinzipien in der Praxis für Scrum Master und Scrum Teams",
+  "lead": "Diese Weiterbildung verbindet Scrum-Grundlagen, agile Prinzipien und die praktische Begleitung von Teams in einem Format für Scrum Master, Team Facilitator und agile Projektkontexte. Im Mittelpunkt stehen empirische Zusammenarbeit, wirksame Moderation, der Umgang mit Impediments und die Übertragung agiler Arbeitsweisen in reale Teamsituationen.",
+  "metaTitle": "Agile Prinzipien in der Praxis für Scrum Master und Scrum Teams | Stay Relevant Academy",
+  "metaDescription": "Weiterbildung zu Scrum, agilen Prinzipien, Facilitation, Impediments und Teamarbeit für Scrum Master, Team Facilitator und agile Teams.",
+  "chips": [
+    "Scrum Master",
+    "Agile Prinzipien",
+    "Facilitation",
+    "Teamarbeit"
+  ],
+  "facts": [
+    {
+      "label": "Dauer",
+      "value": "auf Anfrage"
+    },
+    {
+      "label": "Zielgruppe",
+      "value": "Angehende Scrum Master, Scrum Master, Team Facilitator, Projektleitende und Teilprojektleitende, Fach- und Führungskräfte mit Aufgaben in agilen Teams, Projekten oder Veränderungsvorhaben sowie Mitarbeitende mit Verantwortung für Moderation, Zusammenarbeit und Teamprozesse."
+    },
+    {
+      "label": "Zugang",
+      "value": "Grundkenntnisse in Scrum oder agiler Zusammenarbeit sind hilfreich."
+    },
+    {
+      "label": "Abschluss",
+      "value": "Teilnahmebescheinigung"
+    },
+    {
+      "label": "Zusatzqualifikation",
+      "value": "Vorbereitung auf externe Zertifizierungen von Scrum.org, insbesondere Professional Scrum Master I sowie vertiefend Professional Scrum Master II und Professional Scrum Facilitation Skills."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Scrum Grundlagen und Rolle des Scrum Masters",
+      "intro": "Die Weiterbildung vermittelt ein fundiertes Verständnis für das Scrum Framework, empirische Prozesskontrolle und die Rolle des Scrum Masters in agilen Teams.",
+      "bullets": [
+        "Scrum Werte, empirische Prozesskontrolle und Prinzipien agiler Zusammenarbeit",
+        "Rollen, Artefakte und Ereignisse im Scrum Framework",
+        "Aufgaben, Verantwortlichkeiten und Haltung des Scrum Masters",
+        "Abgrenzung des Scrum Masters zu Product Owner, Projektleitung und Führungskraft"
+      ]
+    },
+    {
+      "title": "Facilitation und Moderation in agilen Teams",
+      "intro": "Ein Schwerpunkt liegt auf der professionellen Gestaltung von Scrum Events, Meetings und Workshops in unterschiedlichen Teamkontexten.",
+      "bullets": [
+        "Vorbereitung, Durchführung und Nachbereitung von Scrum Events, Meetings und Workshops",
+        "Strukturierung von Arbeitsphasen, Agenda-Design und Zielklärung",
+        "Fragetechniken, aktives Zuhören, Visualisierung und Beteiligungsformate",
+        "Entscheidungsverfahren, Konsent, Priorisierung und gemeinsame Arbeitsvereinbarungen"
+      ]
+    },
+    {
+      "title": "Impediments erkennen und bearbeiten",
+      "intro": "Die Teilnehmenden lernen, Hindernisse im Team, im Prozess und im organisatorischen Umfeld systematisch zu analysieren und wirksam zu adressieren.",
+      "bullets": [
+        "Arten von Impediments auf Team-, Prozess- und Organisationsebene",
+        "Analyse von Hindernissen, Abhängigkeiten und Störungen im Arbeitsfluss",
+        "Unterscheidung zwischen Symptomen, Ursachen und strukturellen Rahmenbedingungen",
+        "Bearbeitung von Impediments durch Moderation, Klärung, Eskalation und Nachverfolgung",
+        "Unterstützung des Teams beim Umgang mit Konflikten, Blockaden und Schnittstellenproblemen"
+      ]
+    },
+    {
+      "title": "Teamdynamiken und Zusammenarbeit",
+      "intro": "Ein weiterer Themenblock behandelt Gruppendynamik, psychologische Sicherheit und die Arbeitsfähigkeit interdisziplinärer Teams.",
+      "bullets": [
+        "Grundlagen von Gruppendynamik, Teamphasen und Rollenverhalten",
+        "Einfluss von Vertrauen, Transparenz und psychologischer Sicherheit auf Teamarbeit",
+        "Kommunikationsmuster, Feedbackprozesse und Zusammenarbeit in interdisziplinären Teams",
+        "Umgang mit Spannungen, Widerständen und unterschiedlichen Interessen im Team",
+        "Reflexion von Verantwortung, Selbstorganisation und gemeinsamer Arbeitsfähigkeit"
+      ]
+    },
+    {
+      "title": "Agile Teamprozesse in der Praxis",
+      "intro": "Die Weiterbildung verbindet agile Prinzipien mit konkreten Team- und Projektsituationen, damit Scrum nicht bei Ritualen stehen bleibt.",
+      "bullets": [
+        "Gestaltung von Sprint Planning, Daily Scrum, Sprint Review und Retrospektive",
+        "Begleitung von Backlog-Arbeit, Priorisierung und kontinuierlicher Verbesserung",
+        "Förderung klarer Absprachen, verbindlicher Ergebnisse und wirksamer Lernschleifen",
+        "Übertragung agiler Prinzipien auf reale Arbeits- und Projektsituationen"
+      ]
+    },
+    {
+      "title": "Digitale Zusammenarbeit und Arbeitsmittel",
+      "intro": "Abschließend geht es um die praktische Unterstützung agiler Zusammenarbeit mit digitalen Werkzeugen in virtuellen und hybriden Teams.",
+      "bullets": [
+        "Einsatz digitaler Werkzeuge für Moderation, Zusammenarbeit und Dokumentation",
+        "Strukturierung verteilter Zusammenarbeit in virtuellen oder hybriden Teams",
+        "Sichtbarmachung von Aufgaben, Hindernissen, Entscheidungen und Fortschritten"
+      ]
+    }
+  ]
+}

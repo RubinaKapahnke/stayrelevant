@@ -160,6 +160,20 @@ export const LANDING_PAGE_COURSE_OFFERS: CourseOffer[] = [
     ]
   },
   {
+    category: 'Transformation',
+    label: 'Scrum Master & Teamarbeit',
+    title: 'Agile Prinzipien in der Praxis für Scrum Master und Scrum Teams',
+    duration: 'auf Anfrage',
+    audience: 'Für angehende Scrum Master, Scrum Master, Team Facilitator und agile Teams',
+    text: 'Die Weiterbildung verbindet Scrum-Grundlagen, Facilitation, Impediment-Bearbeitung und Teamdynamik in einem praxisnahen Format für Scrum Master und agile Teams. Im Mittelpunkt stehen wirksame Scrum Events, empirische Zusammenarbeit und die Übertragung agiler Prinzipien in reale Team- und Projektsituationen.',
+    outcomes: [
+      'Scrum-Werte, Rollen und empirische Prozesskontrolle sicher im Arbeitsalltag einordnen',
+      'Scrum Events, Meetings und Workshops wirksam vorbereiten, moderieren und nachbereiten',
+      'Impediments, Konflikte und Teamdynamiken systematischer erkennen und bearbeiten',
+      'Agile Prinzipien, Zusammenarbeit und kontinuierliche Verbesserung in Teams stärker verankern'
+    ]
+  },
+  {
     category: 'KI',
     label: 'Prompt Engineering',
     title: 'Prompt Engineering mit agilem Projektmanagement und Scrum',
