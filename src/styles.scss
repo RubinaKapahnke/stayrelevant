@@ -207,7 +207,7 @@ a {
   color: var(--sr-heading);
 }
 
-main :where(h1, h2, h3, h4, p, li, blockquote, a) {
+main :where(h1, h2, h3, h4, p, li, blockquote) {
   overflow-wrap: anywhere;
 }
 
