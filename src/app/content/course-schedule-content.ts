@@ -18,7 +18,7 @@ export const COURSE_SCHEDULES: CourseSchedule[] = [
     title: 'Agile Coaching mit KI in agilen Organisationen',
     slug: 'agile-coaching-mit-ki-in-agilen-organisationen',
     flexibleStart: true,
-    flexibleStartLabel: 'Regelmaessiger Start moeglich',
+    flexibleStartLabel: 'Regelmäßiger Start möglich',
     starts: []
   },
   {
@@ -79,4 +79,3 @@ export function getCourseScheduleByTitle(title: string | null | undefined): Cour
     null
   );
 }
-

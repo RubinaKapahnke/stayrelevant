@@ -21,7 +21,7 @@ export class CourseDatesSectionComponent {
     this.schedules().map((schedule) => ({
       ...schedule,
       labels: schedule.flexibleStart
-        ? [schedule.flexibleStartLabel ?? 'Regelmaessiger Start']
+        ? [schedule.flexibleStartLabel ?? 'Regelmäßiger Start']
         : schedule.starts.map((date) =>
             date.end ? `${date.start} bis ${date.end}` : date.start
           )

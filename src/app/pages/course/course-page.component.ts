@@ -86,7 +86,7 @@ export class CoursePageComponent {
     }
 
     if (schedule.flexibleStart) {
-      return [schedule.flexibleStartLabel ?? 'Regelmaessiger Start'];
+      return [schedule.flexibleStartLabel ?? 'Regelmäßiger Start'];
     }
 
     return schedule.starts.map((date) => (date.end ? `${date.start} bis ${date.end}` : date.start));
