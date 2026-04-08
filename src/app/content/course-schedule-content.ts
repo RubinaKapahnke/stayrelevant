@@ -56,6 +56,10 @@ const EXPLICIT_COURSE_SCHEDULES: CourseSchedule[] = [
   createExplicitSchedule('Scrum Master: Moderationstechniken und Facilitation für Scrum Teams', [
       { start: '04.05.2026', end: '26.07.2026' },
       { start: '15.06.2026', end: '06.09.2026' }
+    ]),
+  createExplicitSchedule('Agile Prinzipien in der Praxis für Scrum Master und Scrum Teams', [
+      { start: '11.05.2026', end: '02.08.2026' },
+      { start: '22.06.2026', end: '13.09.2026' }
     ])
 ];
 
