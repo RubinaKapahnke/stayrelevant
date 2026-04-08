@@ -1,0 +1,92 @@
+{
+  "title": "Vibe Coding mit KI für Product Owner und Product Manager",
+  "lead": "Diese Weiterbildung verbindet Vibe Coding, KI-gestütztes Prototyping und Produktarbeit in einem praxisnahen Format für Product Owner und Product Manager. Im Mittelpunkt stehen die Übersetzung von Anforderungen in wirksame Prompts, die Erstellung erster Produktartefakte mit KI und die Bewertung von Qualität, Risiken und Umsetzbarkeit im Produktkontext.",
+  "metaTitle": "Vibe Coding mit KI für Product Owner und Product Manager | Stay Relevant Academy",
+  "metaDescription": "Weiterbildung zu Vibe Coding, KI-gestütztem Prototyping und Produktarbeit für Product Owner und Product Manager mit Fokus auf Prompts, Prototypen und Qualitätsbewertung.",
+  "chips": [
+    "Vibe Coding",
+    "KI-Prototyping",
+    "Product Ownership",
+    "Product Management"
+  ],
+  "facts": [
+    {
+      "label": "Dauer",
+      "value": "auf Anfrage"
+    },
+    {
+      "label": "Zielgruppe",
+      "value": "Product Owner, Product Manager, Produktverantwortliche in digitalen Produktkontexten sowie Fach- und Führungskräfte mit Verantwortung für Anforderungen, Priorisierung und Produktentwicklung."
+    },
+    {
+      "label": "Zugang",
+      "value": "Erfahrung im Produktmanagement, im Anforderungsmanagement oder in digitalen Produktkontexten sowie grundlegende PC- und Internetkenntnisse sind hilfreich."
+    },
+    {
+      "label": "Abschluss",
+      "value": "Teilnahmebescheinigung"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Grundlagen von Vibe Coding und KI-gestütztem Prototyping",
+      "intro": "Die Weiterbildung ordnet Vibe Coding im Kontext von Produktentwicklung, digitaler Zusammenarbeit und früher Produktvalidierung ein.",
+      "bullets": [
+        "Einordnung von Vibe Coding im Kontext von Produktentwicklung und digitaler Zusammenarbeit",
+        "Unterschiede zwischen klassischer Spezifikation, Prototyping und KI-gestützter Umsetzung",
+        "Möglichkeiten und Grenzen von KI bei der Erstellung von Oberflächen, Abläufen und einfachen Anwendungen",
+        "Rollenverständnis von Product Owner und Product Manager in KI-gestützten Entwicklungsprozessen"
+      ]
+    },
+    {
+      "title": "Anforderungen in wirksame Prompts übersetzen",
+      "intro": "Ein Schwerpunkt liegt auf der Übersetzung von Produktzielen, Nutzerbedarfen und fachlichen Anforderungen in präzise Prompts für KI-gestützte Ergebnisse.",
+      "bullets": [
+        "Formulierung von Produktzielen, Nutzerbedarfen und fachlichen Anforderungen in natürlicher Sprache",
+        "Strukturierung von Prompts für User Flows, Oberflächen, Funktionen und Datenlogik",
+        "Iteratives Verfeinern von Prompts anhand von Rückfragen, Ergebnissen und Tests",
+        "Nutzung von Akzeptanzkriterien, Beispielen und Randbedingungen zur Steuerung von KI-Ausgaben"
+      ]
+    },
+    {
+      "title": "Prototypen und erste Produktartefakte mit KI erstellen",
+      "intro": "Die Teilnehmenden lernen, Discovery-Ergebnisse und Feature-Ideen mit KI in erste testbare Artefakte zu überführen.",
+      "bullets": [
+        "Entwicklung klickbarer oder funktionsnaher Prototypen für Produktideen und Feature-Konzepte",
+        "Erstellung von Screens, Formularen, Nutzerabläufen und einfachen Interaktionen mit KI-Unterstützung",
+        "Übertragung von Product-Discovery-Ergebnissen in testbare Prototypen",
+        "Einsatz von KI für Entwürfe von Backlog-Einträgen, User Stories, Beschreibungen und Testfällen"
+      ]
+    },
+    {
+      "title": "Bewertung und Qualität von KI-Ergebnissen",
+      "intro": "Ein weiterer Baustein behandelt die fachliche Prüfung, Nachschärfung und qualitative Bewertung KI-generierter Artefakte.",
+      "bullets": [
+        "Prüfung von fachlicher Passung, Verständlichkeit und Konsistenz der erzeugten Ergebnisse",
+        "Erkennen typischer Fehler, Lücken und Widersprüche in KI-generierten Artefakten",
+        "Review von Abläufen, Oberflächen und Logiken aus Sicht von Produkt, Nutzerführung und Umsetzbarkeit",
+        "Nachschärfen von Ergebnissen durch gezielte Korrektur und Kontextergänzung"
+      ]
+    },
+    {
+      "title": "Zusammenarbeit mit Entwicklung, Design und Stakeholdern",
+      "intro": "Die Weiterbildung verbindet KI-gestützte Artefakte mit der praktischen Zusammenarbeit in Produktteams und Stakeholder-Kontexten.",
+      "bullets": [
+        "Übergabe und Abstimmung von KI-erzeugten Prototypen mit Entwicklung und UX",
+        "Nutzung von Prototypen zur Klärung von Anforderungen und Prioritäten",
+        "Vorbereitung von Feedbackschleifen mit Stakeholdern und Nutzenden",
+        "Dokumentation von Entscheidungen, offenen Punkten und Änderungen im Produktkontext"
+      ]
+    },
+    {
+      "title": "Risiken, Grenzen und verantwortlicher Einsatz",
+      "intro": "Abschließend geht es um den reflektierten Umgang mit Risiken, Datenschutz und der Abgrenzung zu produktiver Softwareentwicklung.",
+      "bullets": [
+        "Einordnung von Datenschutz, Vertraulichkeit und Umgang mit sensiblen Informationen",
+        "Reflexion von Qualitätsrisiken, technischer Tragfähigkeit und Wartbarkeit",
+        "Abgrenzung zwischen experimentellem Prototyping und produktiver Softwareentwicklung",
+        "Kriterien für den sinnvollen Einsatz von KI im Produktmanagement und in frühen Entwicklungsphasen"
+      ]
+    }
+  ]
+}

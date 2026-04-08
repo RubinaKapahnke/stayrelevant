@@ -146,6 +146,20 @@ export const LANDING_PAGE_COURSE_OFFERS: CourseOffer[] = [
     ]
   },
   {
+    category: 'Product',
+    label: 'Vibe Coding & KI',
+    title: 'Vibe Coding mit KI für Product Owner und Product Manager',
+    duration: 'auf Anfrage',
+    audience: 'Für Product Owner, Product Manager und Produktverantwortliche in digitalen Produktkontexten',
+    text: 'Die Weiterbildung verbindet Vibe Coding, KI-gestütztes Prototyping und Produktarbeit in einem praxisnahen Format für Product Owner und Product Manager. Im Mittelpunkt stehen die Übersetzung fachlicher Anforderungen in wirksame Prompts, die Erstellung erster Produktartefakte mit KI und die Bewertung von Qualität, Risiken und Umsetzbarkeit.',
+    outcomes: [
+      'Produktziele, Nutzerbedarfe und Anforderungen wirksamer in Prompts übersetzen',
+      'Prototypen, Screens und erste Produktartefakte mit KI schneller entwickeln',
+      'KI-Ergebnisse fachlich, qualitativ und hinsichtlich Umsetzbarkeit sicherer bewerten',
+      'Zusammenarbeit mit Entwicklung, Design und Stakeholdern auf Basis von Prototypen strukturieren'
+    ]
+  },
+  {
     category: 'Transformation',
     label: 'Scrum Master & Facilitation',
     title: 'Scrum Master: Moderationstechniken und Facilitation für Scrum Teams',
