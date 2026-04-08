@@ -1,22 +1,12 @@
 <section id="starttermine" class="sr-section bg-[rgba(255,255,255,0.46)]">
   <div class="sr-container space-y-10">
-    <div class="grid gap-6 xl:grid-cols-[0.95fr_1.05fr] xl:items-end">
+    <div class="grid gap-6 xl:items-end">
       <app-section-heading
         srReveal
         eyebrow="Aktuelle Kursstarts"
         title="Die naechsten Starttermine der aktuell geschalteten Kurse"
         intro="Die Termine orientieren sich an den aktuell hinterlegten KURSNET-Schaltungen und werden bei neuen Exporten aktualisiert."
       />
-
-      <div srReveal srRevealFrom="right" srRevealDelay="80ms">
-        <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--sr-text-muted)]">
-          Stand
-        </p>
-        <p class="mt-4 text-lg leading-7 text-[var(--sr-heading)]">
-          Letzte Aktualisierung der Starttermine:
-          <span class="font-semibold">{{ updatedAt }}</span>
-        </p>
-      </div>
     </div>
 
     <div class="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
@@ -56,4 +46,3 @@
     </div>
   </div>
 </section>
-

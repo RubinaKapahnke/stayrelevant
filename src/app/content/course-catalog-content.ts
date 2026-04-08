@@ -223,7 +223,7 @@ export function buildCourseLandingPageFromOffer(course: CourseOffer): CourseLand
         title: 'Kursprofil',
         body: [
           course.text,
-          'Diese Landing-Page wird direkt aus dem aktuellen Kursportfolio abgeleitet und bietet einen kompakten Überblick über Ausrichtung, Nutzen und Einordnung des Angebots.'
+          'Diese Kursseite wird direkt aus dem aktuellen Kursportfolio abgeleitet und bietet einen kompakten Überblick über Ausrichtung, Nutzen und Einordnung des Angebots.'
         ]
       },
       {

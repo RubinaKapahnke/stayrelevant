@@ -1,9 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import {
-  COURSE_SCHEDULES_UPDATED_AT,
-  CourseSchedule
-} from '../../content/course-schedule-content';
+import { CourseSchedule } from '../../content/course-schedule-content';
 import { RevealOnScrollDirective } from '../../shared/reveal-on-scroll/reveal-on-scroll.directive';
 import { SectionHeadingComponent } from '../../shared/section-heading/section-heading.component';
 
@@ -20,8 +17,6 @@ interface CourseScheduleCard extends CourseSchedule {
 export class CourseDatesSectionComponent {
   readonly schedules = input.required<CourseSchedule[]>();
 
-  protected readonly updatedAt = COURSE_SCHEDULES_UPDATED_AT;
-
   protected readonly cards = computed<CourseScheduleCard[]>(() =>
     this.schedules().map((schedule) => ({
       ...schedule,
@@ -33,4 +28,3 @@ export class CourseDatesSectionComponent {
     }))
   );
 }
-
