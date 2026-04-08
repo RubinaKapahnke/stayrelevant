@@ -1,8 +1,8 @@
 <a class="sr-skip-link" href="#main-content">Zum Inhalt springen</a>
 
 <div class="relative min-h-screen">
-  <header class="fixed inset-x-0 top-0 z-50 border-b border-[rgba(9,23,47,0.08)] bg-[rgba(247,249,252,0.9)] backdrop-blur-xl">
-    <div class="sr-container flex h-20 items-center justify-between gap-6">
+  <header class="sr-header fixed inset-x-0 top-0 z-50 border-b border-[rgba(9,23,47,0.08)] bg-[rgba(247,249,252,0.9)] backdrop-blur-xl">
+    <div class="sr-container flex h-20 items-center justify-between gap-3 sm:gap-6">
       <app-brand-mark />
 
       @if (mode() === 'home') {
@@ -17,10 +17,10 @@
           }
         </nav>
 
-        <div class="flex items-center gap-3">
+        <div class="hidden items-center gap-3 lg:flex">
           <a
             mat-stroked-button
-            class="sr-button sr-button-secondary hidden md:inline-flex"
+            class="sr-button sr-button-secondary"
             href="#kurse"
           >
             Kursportfolio
@@ -29,12 +29,81 @@
             Beratung anfragen
           </a>
         </div>
+
+        <div class="sr-header__mobile-actions flex items-center gap-2 lg:hidden">
+          <a
+            mat-flat-button
+            class="sr-button sr-button-primary sr-header__primary"
+            href="#kontakt"
+            (click)="closeMobileMenu()"
+          >
+            Beratung
+          </a>
+
+          <button
+            type="button"
+            class="sr-menu-toggle"
+            aria-label="Menü öffnen"
+            aria-controls="mobile-navigation"
+            [attr.aria-expanded]="mobileMenuOpen()"
+            (click)="toggleMobileMenu()"
+          >
+            <span class="sr-menu-toggle__line" [class.sr-menu-toggle__line--open]="mobileMenuOpen()"></span>
+            <span class="sr-menu-toggle__line" [class.sr-menu-toggle__line--open]="mobileMenuOpen()"></span>
+            <span class="sr-menu-toggle__line" [class.sr-menu-toggle__line--open]="mobileMenuOpen()"></span>
+          </button>
+        </div>
       } @else {
-        <a mat-stroked-button class="sr-button sr-button-secondary" routerLink="/">
-          Zur Startseite
+        <a mat-stroked-button class="sr-button sr-button-secondary sr-header__primary" routerLink="/">
+          <span class="sr-desktop-only">Zur Startseite</span>
+          <span class="sr-mobile-only">Startseite</span>
         </a>
       }
     </div>
+
+    @if (mode() === 'home' && mobileMenuOpen()) {
+      <div class="sr-mobile-menu-shell lg:hidden">
+        <button
+          type="button"
+          class="sr-mobile-menu-shell__backdrop"
+          aria-label="Menü schließen"
+          (click)="closeMobileMenu()"
+        ></button>
+
+        <div id="mobile-navigation" class="sr-mobile-menu" aria-label="Mobile Navigation">
+          <nav class="space-y-2" aria-label="Hauptnavigation mobil">
+            @for (item of headerNavItems; track item.label) {
+              <a
+                [href]="item.href"
+                class="sr-mobile-menu__link"
+                (click)="closeMobileMenu()"
+              >
+                {{ item.label }}
+              </a>
+            }
+          </nav>
+
+          <div class="mt-5 grid gap-3">
+            <a
+              mat-stroked-button
+              class="sr-button sr-button-secondary"
+              href="#kurse"
+              (click)="closeMobileMenu()"
+            >
+              Kursportfolio
+            </a>
+            <a
+              mat-flat-button
+              class="sr-button sr-button-primary"
+              href="#kontakt"
+              (click)="closeMobileMenu()"
+            >
+              Beratung anfragen
+            </a>
+          </div>
+        </div>
+      </div>
+    }
   </header>
 
   <main id="main-content" class="pt-20">

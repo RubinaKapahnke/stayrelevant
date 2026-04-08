@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
 import {
@@ -21,6 +21,7 @@ import { BrandMarkComponent } from '../brand-mark/brand-mark.component';
 })
 export class PageShellComponent {
   readonly mode = input<'home' | 'simple'>('home');
+  protected readonly mobileMenuOpen = signal(false);
 
   protected readonly headerNavItems = HEADER_NAV_ITEMS;
   protected readonly footerNavItems = FOOTER_NAV_ITEMS;
@@ -30,4 +31,12 @@ export class PageShellComponent {
   protected readonly contactPhoneDisplay = CONTACT_PHONE_DISPLAY;
   protected readonly contactPhoneHref = CONTACT_PHONE_HREF;
   protected readonly contactLocation = CONTACT_LOCATION;
+
+  protected toggleMobileMenu(): void {
+    this.mobileMenuOpen.update((open) => !open);
+  }
+
+  protected closeMobileMenu(): void {
+    this.mobileMenuOpen.set(false);
+  }
 }

@@ -1,0 +1,84 @@
+{
+  "title": "KI im Assistenz- und Office-Management",
+  "lead": "Diese Weiterbildung vermittelt Grundlagen der KI-gestützten Arbeit im Büro- und Assistenzumfeld. Im Mittelpunkt stehen digitales Aufgabenmanagement, Zusammenarbeit mit Microsoft 365, der praktische Einsatz von KI für Protokolle, Kommunikation und Organisation sowie ein strukturierter, verantwortungsvoller Umgang mit KI im beruflichen Alltag.",
+  "metaTitle": "KI im Assistenz- und Office-Management | Stay Relevant Academy",
+  "metaDescription": "Weiterbildung zu KI im Assistenz- und Office-Management mit Fokus auf Outlook, To Do, Planner, Teams, OneNote, ChatGPT, Copilot und praktische Büroprozesse.",
+  "chips": [
+    "KI im Büroalltag",
+    "Microsoft 365",
+    "Assistenz und Office",
+    "Aufgabenmanagement",
+    "Kommunikation und Protokolle"
+  ],
+  "facts": [
+    {
+      "label": "Bildungsart",
+      "value": "Fortbildung/Qualifizierung"
+    },
+    {
+      "label": "Schulart",
+      "value": "Einrichtung der beruflichen Weiterbildung"
+    },
+    {
+      "label": "Zielgruppe",
+      "value": "Mitarbeitende aus Assistenz, Sekretariat und Sachbearbeitung sowie Fachkräfte mit administrativen, organisatorischen oder koordinierenden Aufgaben im Büroalltag."
+    },
+    {
+      "label": "Zugang",
+      "value": "Grundlegende PC-Kenntnisse sowie sichere Anwendung von Microsoft Office oder Microsoft 365 sind hilfreich."
+    },
+    {
+      "label": "Abschluss",
+      "value": "Teilnahmebescheinigung"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Grundlagen der KI-gestützten Büroarbeit",
+      "intro": "Die Weiterbildung vermittelt zentrale Grundlagen für den Einsatz von KI im Assistenz- und Office-Management.",
+      "bullets": [
+        "Grundlagen der KI-gestützten Arbeit im Büro- und Assistenzumfeld",
+        "Grundlagen zu ChatGPT und Microsoft Copilot im beruflichen Einsatz",
+        "Verantwortungsvoller Einsatz von KI im beruflichen Kontext",
+        "Praxisorientierte Einordnung typischer Einsatzfelder im Büroalltag"
+      ]
+    },
+    {
+      "title": "Digitales Aufgabenmanagement und Zusammenarbeit",
+      "intro": "Ein Schwerpunkt liegt auf der strukturierten Organisation von Aufgaben, Abstimmungen und Wiedervorlagen im digitalen Arbeitsalltag.",
+      "bullets": [
+        "Digitales Aufgabenmanagement mit Outlook, To Do und Planner",
+        "Erstellung, Priorisierung und Nachverfolgung von Aufgaben aus E-Mails, Besprechungen und Teams-Kommunikation",
+        "Zusammenarbeit in Microsoft Teams",
+        "Wiedervorlagen, Genehmigungen und strukturierte Arbeitsabläufe"
+      ]
+    },
+    {
+      "title": "Besprechungen, Notizen und Dokumentation mit KI",
+      "intro": "Die Teilnehmenden lernen, wie KI für Mitschriften, Protokolle und die Aufbereitung von Informationen genutzt werden kann.",
+      "bullets": [
+        "Einsatz von KI zur Protokollierung, Zusammenfassung und Aufbereitung von Besprechungen",
+        "Nutzung von OneNote für Transkription, Strukturierung und Verdichtung von Notizen",
+        "KI-gestützte Erstellung und Überarbeitung von E-Mails, Notizen, Protokollen, Formularen und Entwürfen",
+        "Strukturierte Dokumentation und Aufbereitung administrativer Inhalte"
+      ]
+    },
+    {
+      "title": "Umfragen, Auswertung und praktische Anwendungsfälle",
+      "intro": "Weitere Inhalte vertiefen die praktische Nutzung digitaler Werkzeuge in Assistenz, Sekretariat und Sachbearbeitung.",
+      "bullets": [
+        "Erstellung und Auswertung von Umfragen mit Microsoft Forms und Excel",
+        "Praktische Anwendungsfälle aus Assistenz, Sekretariat und Sachbearbeitung",
+        "Unterstützung bei organisatorischen, administrativen und koordinierenden Aufgaben",
+        "Sachliche und praxisnahe Umsetzung als strukturierte Qualifizierung"
+      ]
+    },
+    {
+      "title": "Qualifizierungsrahmen",
+      "body": [
+        "Die Inhalte lehnen sich an die im PDF genannten Themenfelder an, werden jedoch als 4-wöchige Qualifizierung sachlich und ohne Seminarwerbung dargestellt.",
+        "Damit eignet sich die Weiterbildung für Personen, die ihre Arbeitsorganisation, Kommunikation und Dokumentation im Office-Kontext mit KI-gestützten Werkzeugen gezielt weiterentwickeln möchten."
+      ]
+    }
+  ]
+}

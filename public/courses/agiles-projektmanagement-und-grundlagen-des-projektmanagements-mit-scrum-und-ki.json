@@ -1,0 +1,89 @@
+{
+  "title": "Agiles Projektmanagement und Grundlagen des Projektmanagements mit Scrum und KI",
+  "lead": "Diese Weiterbildung verbindet Grundlagen des Projektmanagements mit agilem Projektmanagement, Scrum und dem gezielten Einsatz von Künstlicher Intelligenz im Projektkontext. Sie vermittelt ein praxisnahes Verständnis für Planung, Steuerung, Zusammenarbeit und Projektarbeit in dynamischen Arbeitsumfeldern.",
+  "metaTitle": "Agiles Projektmanagement und Grundlagen des Projektmanagements mit Scrum und KI | Stay Relevant Academy",
+  "metaDescription": "Weiterbildung zu Projektmanagement, agilem Projektmanagement, Scrum und KI mit Fokus auf Projektphasen, Zusammenarbeit, Tools und Praxisübungen.",
+  "chips": [
+    "Projektmanagement",
+    "Agiles Projektmanagement",
+    "Scrum",
+    "Künstliche Intelligenz",
+    "Digitale Projektwerkzeuge"
+  ],
+  "facts": [
+    {
+      "label": "Bildungsart",
+      "value": "Fortbildung/Qualifizierung"
+    },
+    {
+      "label": "Schulart",
+      "value": "Einrichtung der beruflichen Weiterbildung"
+    },
+    {
+      "label": "Zielgruppe",
+      "value": "Projektleitende, Fachkräfte, angehende Scrum Master, angehende Product Owner sowie Fach- und Führungskräfte, die Kenntnisse im Projektmanagement und agilen Projektmanagement aufbauen oder erweitern möchten."
+    },
+    {
+      "label": "Zugang",
+      "value": "Grundkenntnisse im Projektmanagement sowie grundlegende PC- und Internetkenntnisse sind hilfreich."
+    },
+    {
+      "label": "Abschluss",
+      "value": "Teilnahmebescheinigung"
+    },
+    {
+      "label": "Abschlussbezeichnung",
+      "value": "Agiles Projektmanagement und Grundlagen des Projektmanagements mit Scrum und KI"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Grundlagen des Projektmanagements",
+      "intro": "Die Weiterbildung vermittelt zentrale Grundlagen des Projektmanagements und ordnet diese in moderne, dynamische Arbeitsumfelder ein.",
+      "bullets": [
+        "Grundlagen des Projektmanagements",
+        "Projektphasen von Initiierung, Planung und Steuerung bis zum Abschluss",
+        "Aufgaben des Projektmanagements in dynamischen Arbeitsumfeldern",
+        "Strukturierte Planung, Steuerung und Abschluss von Projekten"
+      ]
+    },
+    {
+      "title": "Agiles Projektmanagement und Scrum",
+      "intro": "Ein Schwerpunkt liegt auf agilen Prinzipien, iterativen Vorgehensweisen und dem Scrum Framework als Struktur für komplexe Projektarbeit.",
+      "bullets": [
+        "Agile Prinzipien und iterative Vorgehensweisen",
+        "Scrum Rollen, Scrum Events und Scrum Artefakte",
+        "Sprint Planning, Daily Scrum, Sprint Review und Sprint Retrospektive",
+        "Product Backlog Management und Priorisierung",
+        "Stakeholder Management sowie Umgang mit Komplexität und Unsicherheit im Projektmanagement"
+      ]
+    },
+    {
+      "title": "KI im Projektkontext",
+      "intro": "Die Teilnehmenden lernen, wie KI sinnvoll und verantwortungsvoll in projektbezogene Arbeitsabläufe eingebunden werden kann.",
+      "bullets": [
+        "Einsatzmöglichkeiten von KI-Tools im Projektkontext",
+        "Prompting für Analyse, Strukturierung und fachliche Unterstützung",
+        "Unterstützung bei Dokumentation, Kommunikation und Auswertung",
+        "Datenschutz, ethische Aspekte und rechtliche Rahmenbedingungen beim Einsatz von KI"
+      ]
+    },
+    {
+      "title": "Werkzeuge und praktische Umsetzung",
+      "intro": "Zur praktischen Umsetzung werden digitale Werkzeuge für Projektmanagement und Zusammenarbeit eingesetzt.",
+      "bullets": [
+        "Jira, Confluence, Trello, Microsoft Planner und Miro",
+        "Fallbeispiele und Projektübungen zu Planung, Steuerung und Abstimmung",
+        "Reporting, Dokumentation und kontinuierliche Verbesserung",
+        "Praxisnahe Anwendung in typischen Projektkonstellationen"
+      ]
+    },
+    {
+      "title": "Kompetenzaufbau für agile Projektrollen",
+      "body": [
+        "Die Weiterbildung unterstützt den Aufbau von Grundlagen für agiles Projektmanagement mit Scrum und bereitet auf projektbezogene Rollen in digitalen und agilen Arbeitsumfeldern vor.",
+        "Sie eignet sich damit für Personen, die klassische und agile Projektarbeit besser einordnen, strukturieren und im Arbeitsalltag wirksam anwenden möchten."
+      ]
+    }
+  ]
+}

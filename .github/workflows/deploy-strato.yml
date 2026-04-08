@@ -1,0 +1,58 @@
+name: Deploy To STRATO
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-strato
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Website
+        run: npm run build
+
+      - name: Prepare STRATO Upload
+        run: npm run prepare:deploy
+
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: Deploy To STRATO Via SFTP
+        env:
+          STRATO_SFTP_HOST: ${{ secrets.STRATO_SFTP_HOST }}
+          STRATO_SFTP_PASSWORD: ${{ secrets.STRATO_SFTP_PASSWORD }}
+          STRATO_SFTP_PORT: ${{ secrets.STRATO_SFTP_PORT }}
+          STRATO_SFTP_USERNAME: ${{ secrets.STRATO_SFTP_USERNAME }}
+        run: |
+          lftp -u "$STRATO_SFTP_USERNAME","$STRATO_SFTP_PASSWORD" "sftp://$STRATO_SFTP_HOST:${STRATO_SFTP_PORT:-22}" <<'EOF'
+          set cmd:fail-exit true
+          set net:max-retries 2
+          set net:timeout 20
+          set sftp:auto-confirm yes
+          set xfer:clobber on
+          lcd dist/strato-upload
+          mirror --reverse --delete --verbose --parallel=2 . .
+          bye
+          EOF

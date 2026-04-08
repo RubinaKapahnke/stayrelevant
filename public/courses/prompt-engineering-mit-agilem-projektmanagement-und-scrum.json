@@ -1,0 +1,90 @@
+{
+  "title": "Prompt Engineering mit agilem Projektmanagement und Scrum",
+  "lead": "Diese Weiterbildung vermittelt Kenntnisse im Prompt Engineering sowie in der Anwendung von Künstlicher Intelligenz im Arbeitskontext von agilem Projektmanagement und Scrum. Sie verbindet wirksames Prompting mit agilen Arbeitsweisen, Projektpraxis und dem verantwortungsvollen Einsatz von KI im Team.",
+  "metaTitle": "Prompt Engineering mit agilem Projektmanagement und Scrum | Stay Relevant Academy",
+  "metaDescription": "Weiterbildung zu Prompt Engineering, KI, agilem Projektmanagement und Scrum mit Fokus auf Prompting, Teamarbeit, Tools und Praxisübungen.",
+  "chips": [
+    "Prompt Engineering",
+    "Künstliche Intelligenz",
+    "Agiles Projektmanagement",
+    "Scrum",
+    "Digitale Zusammenarbeit"
+  ],
+  "facts": [
+    {
+      "label": "Bildungsart",
+      "value": "Fortbildung/Qualifizierung"
+    },
+    {
+      "label": "Schulart",
+      "value": "Einrichtung der beruflichen Weiterbildung"
+    },
+    {
+      "label": "Zielgruppe",
+      "value": "Projektleitende, angehende Scrum Master, angehende Product Owner sowie Fach- und Führungskräfte, die Prompt Engineering und KI im Kontext von agilem Projektmanagement und Scrum anwenden möchten."
+    },
+    {
+      "label": "Zugang",
+      "value": "Grundkenntnisse in Projektmanagement, Scrum oder digitalen Arbeitswerkzeugen sind hilfreich."
+    },
+    {
+      "label": "Abschluss",
+      "value": "Teilnahmebescheinigung"
+    },
+    {
+      "label": "Abschlussbezeichnung",
+      "value": "Prompt Engineering mit agilem Projektmanagement und Scrum"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Grundlagen von KI und Prompt Engineering",
+      "intro": "Die Weiterbildung vermittelt die Grundlagen generativer KI und den gezielten Einsatz von Prompts für typische Arbeitsaufgaben im Projekt- und Teamkontext.",
+      "bullets": [
+        "Grundlagen der Künstlichen Intelligenz",
+        "Einsatzmöglichkeiten generativer KI",
+        "Aufbau und Funktionsweise von Prompts",
+        "Strukturierte Nutzung von KI-Tools für Analyse, Dokumentation, Kommunikation und Aufgabenbearbeitung"
+      ]
+    },
+    {
+      "title": "Formulierung, Optimierung und Bewertung von Prompts",
+      "intro": "Ein Schwerpunkt liegt auf dem systematischen Aufbau wirksamer Prompts und der iterativen Verbesserung von Ergebnissen.",
+      "bullets": [
+        "Formulierungstechniken und Zieldefinition",
+        "Kontextsteuerung und iterative Überarbeitung",
+        "Zero Shot, One Shot und Few Shot Prompting",
+        "Vergleich unterschiedlicher Prompting-Ansätze",
+        "Qualitätssicherung, Bewertung von Ergebnissen sowie typische Fehlerquellen und Grenzen KI-gestützter Ausgaben"
+      ]
+    },
+    {
+      "title": "Agiles Projektmanagement und Scrum",
+      "intro": "Die Teilnehmenden ordnen Prompt Engineering in agile Arbeitsweisen und das Scrum Framework ein.",
+      "bullets": [
+        "Grundlagen agiler Arbeitsweisen",
+        "Scrum Rollen, Scrum Events und Scrum Artefakte",
+        "Sprint Planning, Daily Scrum, Sprint Review und Sprint Retrospektive",
+        "Product Backlog, Product Goal und Priorisierung",
+        "Nutzung von KI im Zusammenhang mit Planung, Abstimmung, Strukturierung und Reflexion im Team"
+      ]
+    },
+    {
+      "title": "Werkzeuge und praktische Umsetzung",
+      "intro": "Zur praktischen Umsetzung werden digitale Werkzeuge für Zusammenarbeit und Projektsteuerung eingesetzt.",
+      "bullets": [
+        "Jira, Trello, Asana, Notion, Confluence und Miro",
+        "Fallbeispiele und Übungen zur Erstellung, Überarbeitung und Bewertung von Prompts",
+        "Einbindung von KI in agile Arbeitsprozesse und Projektabläufe",
+        "Praxisnahe Nutzung von KI in Teamkommunikation, Aufgabenbearbeitung und Wissensorganisation"
+      ]
+    },
+    {
+      "title": "Verantwortungsvoller Einsatz von KI",
+      "body": [
+        "Weitere Inhalte sind Grundlagen zu Datenschutz, rechtlichen Rahmenbedingungen und verantwortungsvoller Nutzung von KI im Projektumfeld.",
+        "Darüber hinaus werden die Auswahl geeigneter KI-Tools sowie der unterstützende Einsatz von KI für Automatisierung, Wissensorganisation, Kommunikation und Dokumentation behandelt."
+      ]
+    }
+  ]
+}

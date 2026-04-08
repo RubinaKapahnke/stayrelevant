@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "postbuild": "node tools/postbuild-cache-compat.mjs",
+    "prepare:deploy": "node tools/prepare-strato-deploy.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

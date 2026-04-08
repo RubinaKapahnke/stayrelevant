@@ -1,0 +1,84 @@
+{
+  "title": "Product Ownership, Backlog Management und KI in Scrum",
+  "lead": "Diese Weiterbildung vermittelt praxisnahe Kompetenzen für die Rolle des Product Owners. Im Fokus stehen Produktvision, Anforderungsmanagement, Product Backlog Management, Zusammenarbeit im Scrum Rahmen sowie der gezielte Einsatz von KI-Werkzeugen in der agilen Produktentwicklung.",
+  "metaTitle": "Product Ownership, Backlog Management und KI in Scrum | Stay Relevant Academy",
+  "metaDescription": "Weiterbildung zu Product Ownership, Backlog Management und KI in Scrum mit Fokus auf Anforderungen, Priorisierung, Stakeholder-Abstimmung und Vorbereitung auf PSPO I.",
+  "chips": [
+    "Product Ownership",
+    "Backlog Management",
+    "Scrum",
+    "KI-Werkzeuge",
+    "PSPO I Vorbereitung"
+  ],
+  "facts": [
+    {
+      "label": "Bildungsart",
+      "value": "Fortbildung/Qualifizierung"
+    },
+    {
+      "label": "Schulart",
+      "value": "Einrichtung der beruflichen Weiterbildung"
+    },
+    {
+      "label": "Zielgruppe",
+      "value": "Angehende Product Owner, Mitarbeitende aus Produktmanagement, Business Analyse, Projektumfeld sowie Fach- und Führungskräfte mit Bezug zu agiler Produktentwicklung und Anforderungsmanagement."
+    },
+    {
+      "label": "Zugang",
+      "value": "Grundkenntnisse in agiler Zusammenarbeit oder im Projektumfeld sind hilfreich. Grundlegende PC- und Internetkenntnisse sind hilfreich."
+    },
+    {
+      "label": "Abschluss",
+      "value": "Teilnahmebescheinigung"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Rolle und Aufgaben des Product Owners",
+      "intro": "Die Weiterbildung vermittelt die Rolle des Product Owners als zentrale Schnittstelle zwischen fachlichen Anforderungen, Produktziel und Entwicklungsteam.",
+      "bullets": [
+        "Rolle und Aufgaben des Product Owners",
+        "Produktvision und Zieldefinition",
+        "Abstimmung mit Stakeholdern und Entwicklungsteam",
+        "Zusammenarbeit im Scrum Rahmen"
+      ]
+    },
+    {
+      "title": "Anforderungen, User Stories und Priorisierung",
+      "intro": "Ein Schwerpunkt liegt auf der strukturierten Aufnahme, Beschreibung und Priorisierung fachlicher Anforderungen.",
+      "bullets": [
+        "Anforderungsaufnahme und Priorisierung",
+        "Formulierung von User Stories",
+        "Definition von Akzeptanzkriterien",
+        "Umgang mit Änderungen und Feedback"
+      ]
+    },
+    {
+      "title": "Product Backlog Management",
+      "intro": "Die Teilnehmenden lernen, Backlogs fachlich sauber aufzubauen, zu strukturieren und im Projektverlauf wirksam zu pflegen.",
+      "bullets": [
+        "Aufbau, Strukturierung und Pflege des Product Backlogs",
+        "Abstimmung und Priorisierung im laufenden Produktkontext",
+        "Sprint Planning aus Sicht des Product Owners",
+        "Transparente Dokumentation und Vorbereitung von Arbeitspaketen"
+      ]
+    },
+    {
+      "title": "KI in Anforderungen und Backlogs",
+      "intro": "Ein weiterer Baustein behandelt den gezielten Einsatz von KI-Werkzeugen zur Unterstützung typischer Product-Owner-Aufgaben.",
+      "bullets": [
+        "Analyse, Strukturierung und Überarbeitung von Anforderungen",
+        "Unterstützung bei Backlogs und Dokumentation",
+        "Einsatz von KI-Werkzeugen für fachliche Aufbereitung und Überarbeitung",
+        "Praktische Nutzung von KI zur Effizienzsteigerung im Scrum-Kontext"
+      ]
+    },
+    {
+      "title": "Zusatzqualifikation und Zertifizierungsvorbereitung",
+      "body": [
+        "Die Weiterbildung unterstützt die Vorbereitung auf externe Zertifizierungen von Scrum.org, insbesondere Professional Scrum Product Owner I.",
+        "Damit eignet sich der Kurs sowohl für den direkten Praxiseinsatz im Product Ownership als auch für den strukturierten Kompetenzaufbau mit Blick auf eine externe Prüfung."
+      ]
+    }
+  ]
+}

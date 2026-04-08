@@ -24,6 +24,21 @@ Die App läuft lokal unter `http://localhost:4200/`.
 npm run build
 ```
 
+## GitHub Deploy Zu STRATO
+
+Ein GitHub-Actions-Workflow liegt in `.github/workflows/deploy-strato.yml`.
+Er baut die Seite bei jedem Push auf `main` und lÃ¤dt den fertigen Stand per SFTP nach STRATO.
+
+BenÃ¶tigte Repository-Secrets in GitHub:
+
+- `STRATO_SFTP_HOST`
+- `STRATO_SFTP_PORT`
+- `STRATO_SFTP_USERNAME`
+- `STRATO_SFTP_PASSWORD`
+
+Der Workflow nutzt `dist/strato-upload` als Staging-Verzeichnis. Dabei werden `public/experts`
+und `public/courses/_template.json` bewusst nicht verÃ¶ffentlicht.
+
 ## Projektstruktur
 
 - `src/app/pages` enthält Seitenkomponenten wie Startseite und rechtliche Platzhalter

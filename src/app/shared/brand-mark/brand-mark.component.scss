@@ -1,11 +1,15 @@
 :host {
   display: inline-flex;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .brand-mark {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .brand-mark__symbol {
@@ -37,6 +41,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.12rem;
+  min-width: 0;
   line-height: 1;
 }
 
@@ -48,6 +53,7 @@
   font-size: clamp(1.62rem, 2vw, 2.08rem);
   font-weight: 800;
   letter-spacing: -0.06em;
+  white-space: nowrap;
 }
 
 .brand-mark__stay {
@@ -104,5 +110,24 @@
   .brand-mark__academy {
     font-size: 0.72rem;
     letter-spacing: 0.18em;
+  }
+}
+
+@media (max-width: 479px) {
+  .brand-mark {
+    gap: 0.55rem;
+  }
+
+  .brand-mark__symbol {
+    width: 3.1rem;
+  }
+
+  .brand-mark__line {
+    gap: 0.24rem;
+    font-size: 1.08rem;
+  }
+
+  .brand-mark__academy {
+    display: none;
   }
 }

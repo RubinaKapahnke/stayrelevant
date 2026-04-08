@@ -1,0 +1,78 @@
+{
+  "title": "Agiles Projektmanagement mit KI und Scrum",
+  "lead": "Diese Weiterbildung verbindet Künstliche Intelligenz, agile Projektarbeit und Scrum zu einem praxisnahen Format für Projektleitende, angehende Scrum Master, angehende Product Owner sowie Fach- und Führungskräfte.",
+  "metaTitle": "Agiles Projektmanagement mit KI und Scrum | Stay Relevant Academy",
+  "metaDescription": "Weiterbildung zu KI, agilem Projektmanagement und Scrum mit Praxisbezug, digitalen Werkzeugen und Vorbereitung auf Scrum.org-Zertifizierungen.",
+  "chips": [
+    "Künstliche Intelligenz",
+    "Agiles Projektmanagement",
+    "Scrum",
+    "Digitale Projektwerkzeuge",
+    "Zertifizierungsvorbereitung"
+  ],
+  "facts": [
+    {
+      "label": "Zielgruppe",
+      "value": "Projektleitende, angehende Scrum Master, angehende Product Owner sowie Fach- und Führungskräfte, die Projekte mit KI, Scrum und agilen Methoden strukturieren und begleiten möchten."
+    },
+    {
+      "label": "Zugang",
+      "value": "Grundkenntnisse im Projektmanagement sowie grundlegende PC- und Internetkenntnisse sind hilfreich."
+    },
+    {
+      "label": "Abschluss",
+      "value": "Teilnahmebescheinigung. Vorbereitung auf externe Zertifizierungen von Scrum.org."
+    }
+  ],
+  "sections": [
+    {
+      "title": "KI im Projektkontext",
+      "intro": "Die Weiterbildung vermittelt Grundlagen und Einsatzmöglichkeiten von Künstlicher Intelligenz in der Projektarbeit.",
+      "bullets": [
+        "Grundlagen der Künstlichen Intelligenz",
+        "Einsatzmöglichkeiten von KI-Tools im Projektkontext",
+        "Prompting und strukturierte Steuerung von KI-Systemen",
+        "Datenschutz sowie ethische und rechtliche Rahmenbedingungen beim Einsatz von KI"
+      ]
+    },
+    {
+      "title": "Agiles Projektmanagement und Scrum",
+      "intro": "Ein zweiter Schwerpunkt liegt auf agilen Arbeitsweisen, dem Scrum Framework und der Steuerung von Projekten unter Unsicherheit.",
+      "bullets": [
+        "Agile Arbeitsweisen und Scrum als Rahmen für komplexe Projektumfelder",
+        "Rollen, Events und Artefakte im Scrum Framework",
+        "Empirische Steuerung, Priorisierung und Stakeholder-Management",
+        "Umgang mit Komplexität und Unsicherheit",
+        "Product Value, Product Backlog Management und Sprint Planning",
+        "Daily Scrum, Sprint Review und Sprint Retrospektive"
+      ]
+    },
+    {
+      "title": "Digitale Werkzeuge und praktische Umsetzung",
+      "intro": "Zur praktischen Umsetzung arbeiten die Teilnehmenden mit digitalen Werkzeugen und realitätsnahen Übungen.",
+      "bullets": [
+        "Jira, Confluence, Trello, Microsoft Planner und Miro",
+        "Fallbeispiele und Projektübungen zu Planung, Steuerung und Dokumentation",
+        "Zusammenarbeit, Analyse und kontinuierliche Verbesserung im Projektalltag"
+      ]
+    },
+    {
+      "title": "Integration von KI in Arbeitsabläufe",
+      "intro": "Ein eigener Block widmet sich der Bewertung und Integration von KI-Anwendungsfällen im Projektmanagement.",
+      "bullets": [
+        "Bewertung von KI-Anwendungsfällen im Projektmanagement",
+        "Auswahl geeigneter KI-Tools",
+        "Strukturierte Integration von KI in Arbeitsabläufe",
+        "Grundlagen von Reporting, Kommunikation und Moderation",
+        "Teamübergreifende Zusammenarbeit in agilen Umfeldern"
+      ]
+    },
+    {
+      "title": "Zertifizierungsvorbereitung",
+      "body": [
+        "Die Weiterbildung unterstützt die Vorbereitung auf externe Zertifizierungen von Scrum.org, insbesondere Professional Scrum Master I (PSM I) und Professional Scrum Product Owner I (PSPO I).",
+        "Je nach inhaltlichem Zuschnitt können zusätzlich Grundlagen für Scaled Professional Scrum (SPS) und Professional Scrum with Kanban (PSK I) vermittelt werden."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Kurstitel",
+  "lead": "Kurze Zusammenfassung in 1 bis 2 Sätzen.",
+  "metaTitle": "Kurstitel | Stay Relevant Academy",
+  "metaDescription": "Kurze Meta-Beschreibung für Browser, Vorschauen und Suchergebnisse.",
+  "chips": [
+    "Schwerpunkt 1",
+    "Schwerpunkt 2",
+    "Schwerpunkt 3"
+  ],
+  "facts": [
+    {
+      "label": "Zielgruppe",
+      "value": "Für wen ist der Kurs gedacht?"
+    },
+    {
+      "label": "Zugang",
+      "value": "Welche Vorkenntnisse sind hilfreich?"
+    },
+    {
+      "label": "Abschluss",
+      "value": "Welche Abschlussart oder Zertifizierungsvorbereitung wird angeboten?"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Themenblock 1",
+      "intro": "Kurze Einordnung des Themenblocks.",
+      "bullets": [
+        "Inhalt 1",
+        "Inhalt 2",
+        "Inhalt 3"
+      ]
+    },
+    {
+      "title": "Themenblock 2",
+      "body": [
+        "Absatz 1",
+        "Absatz 2"
+      ]
+    }
+  ]
+}

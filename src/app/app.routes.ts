@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { LEGAL_PAGES } from './content/legal-content';
+import { CoursePageComponent } from './pages/course/course-page.component';
 import { HomePageComponent } from './pages/home/home-page.component';
 import { LegalPageComponent } from './pages/legal/legal-page.component';
 
@@ -8,6 +9,11 @@ export const routes: Routes = [
     path: '',
     component: HomePageComponent,
     title: 'Stay Relevant Academy | Weiterbildung für Menschen und Organisationen'
+  },
+  {
+    path: 'kurse/:slug',
+    component: CoursePageComponent,
+    title: 'Kurse | Stay Relevant Academy'
   },
   {
     path: 'impressum',

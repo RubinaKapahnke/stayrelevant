@@ -1,0 +1,80 @@
+{
+  "title": "Agile Coaching mit KI in agilen Organisationen",
+  "lead": "Diese Weiterbildung vermittelt Kompetenzen für Agile Coaching, Scrum und die Begleitung agiler Organisationen unter Einsatz von Künstlicher Intelligenz. Im Fokus stehen agile Zusammenarbeit, Coaching, Facilitation, Organisationsentwicklung und der gezielte Einsatz von KI-Werkzeugen zur Unterstützung von Reflexion, Dokumentation und Veränderungsprozessen.",
+  "metaTitle": "Agile Coaching mit KI in agilen Organisationen | Stay Relevant Academy",
+  "metaDescription": "Weiterbildung zu Agile Coaching, Scrum, Facilitation und KI in agilen Organisationen mit Fokus auf Organisationsentwicklung, Retrospektiven, Kanban und Zertifizierungsvorbereitung.",
+  "chips": [
+    "Agile Coaching",
+    "Scrum",
+    "Facilitation",
+    "Künstliche Intelligenz",
+    "Agile Organisationen"
+  ],
+  "facts": [
+    {
+      "label": "Zielgruppe",
+      "value": "Angehende Agile Coaches, Scrum Master, Agile Leads, Product Owner, Fach- und Führungskräfte sowie Mitarbeitende aus Organisationsentwicklung, Transformation und agilem Projektumfeld."
+    },
+    {
+      "label": "Zugang",
+      "value": "Grundkenntnisse in Scrum, agiler Zusammenarbeit oder Projektarbeit sind hilfreich. Grundlegende PC- und Internetkenntnisse sind hilfreich."
+    },
+    {
+      "label": "Abschluss",
+      "value": "Teilnahmebescheinigung"
+    },
+    {
+      "label": "Zusatzqualifikation",
+      "value": "Vorbereitung auf externe Zertifizierungen von Scrum.org, insbesondere Professional Scrum Master I, Professional Scrum Product Owner I, Professional Agile Leadership I, Professional Scrum with Kanban I, Scaled Professional Scrum sowie Professional Scrum Facilitation Skills."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Grundlagen von Scrum und agiler Zusammenarbeit",
+      "intro": "Die Weiterbildung vermittelt die Grundlagen agiler Zusammenarbeit und ordnet Scrum als Rahmen für Teamarbeit und Organisationsentwicklung ein.",
+      "bullets": [
+        "Grundlagen von Scrum und agiler Zusammenarbeit",
+        "Agile Werte und empirische Prozesssteuerung",
+        "Entwicklung lernender Organisationen",
+        "Zusammenarbeit in Teams und über Teamgrenzen hinweg"
+      ]
+    },
+    {
+      "title": "Rolle und Aufgaben des Agile Coach",
+      "intro": "Ein Schwerpunkt liegt auf der Rolle des Agile Coach in Teams und Organisationen sowie auf der Zusammenarbeit mit zentralen agilen Rollen.",
+      "bullets": [
+        "Rolle und Aufgaben des Agile Coach in Teams und Organisationen",
+        "Zusammenarbeit mit Scrum Master, Product Owner, Führungskräften und Entwicklungsteams",
+        "Coaching, Facilitation und Moderation in Scrum-Kontexten",
+        "Führung und Entscheidungsfindung in agilen Organisationen"
+      ]
+    },
+    {
+      "title": "Retrospektiven, Workshops und Veränderungsprozesse",
+      "intro": "Die Teilnehmenden lernen, wie Retrospektiven, Workshops und Veränderungsprozesse wirksam gestaltet und begleitet werden.",
+      "bullets": [
+        "Gestaltung und Begleitung von Retrospektiven",
+        "Planung und Moderation von Workshops",
+        "Begleitung von Veränderungsprozessen",
+        "Reflexion, Moderation und Entwicklung im Team- und Organisationskontext"
+      ]
+    },
+    {
+      "title": "Wertorientierung, Kanban und Skalierung",
+      "intro": "Weitere Inhalte vertiefen die wertorientierte Zusammenarbeit im Produktkontext sowie die Weiterentwicklung agiler Arbeitsweisen in Organisationen.",
+      "bullets": [
+        "Product Backlog, Produktziele, Wertorientierung und Stakeholder-Einbindung",
+        "Kanban-Praktiken zur Visualisierung und Verbesserung des Arbeitsflusses",
+        "Skalierung agiler Zusammenarbeit in Organisationen",
+        "Zusammenhänge zwischen Teamarbeit, Fluss und Organisationsentwicklung"
+      ]
+    },
+    {
+      "title": "KI zur Unterstützung von Coaching und Organisationsentwicklung",
+      "body": [
+        "Ein weiterer Schwerpunkt liegt auf dem Einsatz von KI-Werkzeugen zur Analyse, Strukturierung, Dokumentation, Reflexion und Unterstützung von Coaching, Facilitation und Organisationsentwicklung.",
+        "Die Weiterbildung unterstützt außerdem die Vorbereitung auf externe Zertifizierungen von Scrum.org in den Bereichen Scrum Master, Product Ownership, Agile Leadership, Scrum mit Kanban, Skalierung und Facilitation Skills."
+      ]
+    }
+  ]
+}
