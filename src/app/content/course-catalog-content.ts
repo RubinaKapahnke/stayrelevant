@@ -148,7 +148,7 @@ export const LANDING_PAGE_COURSE_OFFERS: CourseOffer[] = [
   {
     category: 'Transformation',
     label: 'Scrum Master & Facilitation',
-    title: 'Scrum Master: Moderationstechniken und Facilitation',
+    title: 'Scrum Master: Moderationstechniken und Facilitation für Scrum Teams',
     duration: '12 Wochen',
     audience: 'Für angehende Scrum Master, Projektleitende, agile Teams und Moderationsrollen',
     text: 'Die Weiterbildung verbindet Scrum Mastery, Moderationstechniken und Facilitation in einem praxisnahen Format. Im Mittelpunkt stehen Scrum Framework, die Begleitung selbstorganisierter Teams sowie die professionelle Gestaltung von Workshops, Scrum Events und Teamprozessen.',
