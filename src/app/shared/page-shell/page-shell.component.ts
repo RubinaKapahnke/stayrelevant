@@ -1,6 +1,8 @@
-import { ChangeDetectionStrategy, Component, input, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, input, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { RouterLink } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { filter, map, startWith } from 'rxjs';
 import {
   CONTACT_EMAIL,
   CONTACT_EMAIL_HREF,
@@ -21,8 +23,18 @@ import { BrandMarkComponent } from '../brand-mark/brand-mark.component';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PageShellComponent {
+  private readonly router = inject(Router);
+
   readonly mode = input<'home' | 'simple'>('home');
   protected readonly mobileMenuOpen = signal(false);
+  private readonly currentUrl = toSignal(
+    this.router.events.pipe(
+      filter((event): event is NavigationEnd => event instanceof NavigationEnd),
+      map((event) => event.urlAfterRedirects),
+      startWith(this.router.url)
+    ),
+    { initialValue: this.router.url }
+  );
 
   protected readonly headerNavItems = HEADER_NAV_ITEMS;
   protected readonly footerNavItems = FOOTER_NAV_ITEMS;
@@ -37,6 +49,7 @@ export class PageShellComponent {
   protected readonly contactPhoneDisplay = CONTACT_PHONE_DISPLAY;
   protected readonly contactPhoneHref = CONTACT_PHONE_HREF;
   protected readonly contactLocation = CONTACT_LOCATION;
+  protected readonly courseRouteActive = computed(() => this.currentUrl().startsWith('/kurse'));
 
   protected toggleMobileMenu(): void {
     this.mobileMenuOpen.update((open) => !open);

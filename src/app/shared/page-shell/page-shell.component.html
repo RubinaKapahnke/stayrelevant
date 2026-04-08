@@ -12,7 +12,8 @@
               <div class="sr-nav-item">
                 <a
                   [href]="item.href"
-                  class="text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-[var(--sr-text-muted)] transition hover:text-[var(--sr-blue)]"
+                  class="sr-nav-link"
+                  [class.sr-nav-link--current]="courseRouteActive()"
                 >
                   {{ item.label }}
                 </a>
@@ -40,7 +41,7 @@
             } @else {
               <a
                 [href]="item.href"
-                class="text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-[var(--sr-text-muted)] transition hover:text-[var(--sr-blue)]"
+                class="sr-nav-link"
               >
                 {{ item.label }}
               </a>
