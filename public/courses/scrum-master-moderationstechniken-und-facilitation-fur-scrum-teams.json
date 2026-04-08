@@ -1,0 +1,89 @@
+{
+  "title": "Scrum Master: Moderationstechniken und Facilitation für Scrum Teams",
+  "lead": "Diese Weiterbildung vermittelt fundierte Kompetenzen für die Rolle des Scrum Masters mit einem besonderen Schwerpunkt auf Moderation, Facilitation und der Begleitung von Teamprozessen. Im Mittelpunkt stehen Scrum Framework, agile Arbeitsweise, selbstorganisierte Teams und die professionelle Gestaltung von Workshops, Scrum Events und Zusammenarbeit.",
+  "metaTitle": "Scrum Master: Moderationstechniken und Facilitation für Scrum Teams | Stay Relevant Academy",
+  "metaDescription": "Weiterbildung für Scrum Master, Moderation und Facilitation mit Fokus auf Scrum Framework, Teamprozesse, Workshops und Zertifizierungsvorbereitung.",
+  "chips": [
+    "Scrum Master",
+    "Scrum",
+    "Moderation",
+    "Facilitation",
+    "12 Wochen"
+  ],
+  "facts": [
+    {
+      "label": "Dauer",
+      "value": "12 Wochen"
+    },
+    {
+      "label": "Zielgruppe",
+      "value": "Angehende Scrum Master, Projektleitende und Teilprojektleitende, Fach- und Führungskräfte mit Aufgaben in agilen Projekten sowie Mitarbeitende mit Aufgaben in der Moderation von Workshops und in der Begleitung von Teamprozessen."
+    },
+    {
+      "label": "Abschluss",
+      "value": "Teilnahmebescheinigung"
+    },
+    {
+      "label": "Zusatzqualifikation",
+      "value": "Vorbereitung auf externe Zertifizierungen von Scrum.org, insbesondere Professional Scrum Master I sowie vertiefend Professional Scrum Master II und Professional Scrum Facilitation Skills."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Scrum Framework und agile Arbeitsweise",
+      "intro": "Die Weiterbildung vermittelt ein fundiertes Verständnis für Scrum als Rahmen für agile Zusammenarbeit und empirische Prozesssteuerung.",
+      "bullets": [
+        "Scrum Framework und agile Arbeitsweise",
+        "Scrum Werte und empirische Prozesskontrolle",
+        "Rollen, Artefakte und Ereignisse in Scrum",
+        "Product Backlog, Sprint Backlog, Inkrement und Definition of Done"
+      ]
+    },
+    {
+      "title": "Rolle des Scrum Masters",
+      "intro": "Ein Schwerpunkt liegt auf der Rolle des Scrum Masters als Begleiter, Enabler und Impulsgeber für Teams und Organisationen.",
+      "bullets": [
+        "Aufgaben, Verantwortlichkeiten und Abgrenzung zu anderen Rollen",
+        "Begleitung selbstorganisierter Teams",
+        "Erkennen und Bearbeiten von Impediments",
+        "Unterstützung von Veränderungsprozessen in Teams und Organisationen"
+      ]
+    },
+    {
+      "title": "Moderation und Facilitation",
+      "intro": "Die Teilnehmenden lernen, Scrum Events, Meetings und Workshops professionell vorzubereiten, zu moderieren und nachzubereiten.",
+      "bullets": [
+        "Vorbereitung, Durchführung und Nachbereitung von Scrum Events, Meetings und Workshops",
+        "Agenda-Design, Zielformulierung und Strukturierung von Arbeitsphasen",
+        "Fragetechniken, Visualisierung, Entscheidungsverfahren und Beteiligungsformate",
+        "Umgang mit unterschiedlichen Perspektiven, Konflikten und Widerständen"
+      ]
+    },
+    {
+      "title": "Teamprozesse und Zusammenarbeit",
+      "intro": "Ein weiterer Baustein behandelt Teamdynamik, Reflexion und die Förderung verbindlicher Zusammenarbeit in interdisziplinären Kontexten.",
+      "bullets": [
+        "Grundlagen von Gruppendynamik und Teamphasen",
+        "Kommunikationsmuster, Feedback und Reflexion im Team",
+        "Förderung von Transparenz, Fokus und verbindlichen Arbeitsergebnissen",
+        "Zusammenarbeit in interdisziplinären Teams"
+      ]
+    },
+    {
+      "title": "Agiles Projektmanagement und digitale Zusammenarbeit",
+      "intro": "Die Weiterbildung ordnet Scrum in agiles Projektmanagement ein und verbindet Facilitation mit Planung, Priorisierung und digitaler Zusammenarbeit.",
+      "bullets": [
+        "Einordnung von Scrum in agiles Projektmanagement",
+        "Planung, Priorisierung und kontinuierliche Verbesserung",
+        "Einsatz digitaler Werkzeuge für Zusammenarbeit, Moderation und Dokumentation"
+      ]
+    },
+    {
+      "title": "Zertifizierungsvorbereitung",
+      "body": [
+        "Die Weiterbildung unterstützt die Vorbereitung auf externe Zertifizierungen von Scrum.org, insbesondere Professional Scrum Master I.",
+        "Darüber hinaus wird eine vertiefende Grundlage für Professional Scrum Master II und Professional Scrum Facilitation Skills gelegt."
+      ]
+    }
+  ]
+}
