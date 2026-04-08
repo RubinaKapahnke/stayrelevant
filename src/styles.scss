@@ -266,6 +266,41 @@ section[id] {
   color: white;
 }
 
+.sr-contact-input {
+  width: 100%;
+  min-height: 3.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  padding: 0.9rem 1rem;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.sr-contact-input::placeholder {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.sr-contact-input:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.sr-contact-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.44);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(var(--sr-blue-rgb), 0.14);
+}
+
+.sr-contact-error {
+  color: #ffc2c2;
+  font-size: 0.84rem;
+  line-height: 1.4;
+}
+
 .sr-chip {
   display: inline-flex;
   align-items: center;

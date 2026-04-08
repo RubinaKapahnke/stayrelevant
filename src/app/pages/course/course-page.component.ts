@@ -6,7 +6,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { catchError, distinctUntilChanged, map, of, startWith, switchMap } from 'rxjs';
-import { CONTACT_EMAIL_HREF } from '../../content/home-content';
 import { CourseLandingPageContent } from '../../content/course-landing-content';
 import { PageShellComponent } from '../../shared/page-shell/page-shell.component';
 
@@ -62,7 +61,7 @@ export class CoursePageComponent {
     () => {
       const courseTitle = this.content()?.title ?? 'Weiterbildung bei Stay Relevant Academy';
 
-      return `${CONTACT_EMAIL_HREF}?subject=${encodeURIComponent(`Interesse am Kurs: ${courseTitle}`)}`;
+      return `/?anfrage=${encodeURIComponent(`Kursanfrage: ${courseTitle}`)}#kontakt`;
     }
   );
 
