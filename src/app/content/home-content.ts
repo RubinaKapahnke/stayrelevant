@@ -898,14 +898,14 @@ export const CHALLENGE_CONTENT: ChallengeContent = {
   eyebrow: 'Warum das wichtig ist',
   title: 'Viele spüren den Wandel. Wenige bekommen klare Lernorientierung.',
   intro:
-    'KI, Automatisierung und veränderte Anforderungen verschieben Aufgabenprofile schneller, als viele Weiterbildungen darauf reagieren. Zwischen Hype, Unsicherheit und Tool-Flut fehlt oft die einfache Antwort auf die Frage: Was sollte ich jetzt konkret lernen, damit meine Arbeit anschlussfähig bleibt? Genau in dieser Lücke entstehen FOMO, also die Angst, technologisch etwas zu verpassen, und FOBO, die Sorge, beruflich überflüssig zu werden.',
+    'KI, Automatisierung und veränderte Anforderungen verschieben Aufgabenprofile schneller, als viele Weiterbildungen darauf reagieren. Zwischen Hype, Unsicherheit und Tool-Flut fehlt oft die einfache Antwort auf die Frage: Was sollte ich jetzt konkret lernen, damit meine Arbeit anschlussfähig bleibt? Genau in dieser Lücke entstehen der Druck, technologisch nichts verpassen zu dürfen, und die Sorge, mit der eigenen Rolle beruflich an Bedeutung zu verlieren.',
   cards: [
     {
       title: 'Arbeit verändert sich im Detail',
       text: 'Nicht nur Berufe verändern sich, sondern Tätigkeiten, Verantwortungen, Entscheidungswege und Qualitätsstandards innerhalb bestehender Rollen.'
     },
     {
-      title: 'Zwischen FOMO und FOBO',
+      title: 'Zwischen Veränderungsdruck und Zukunftssorge',
       text: 'Viele erleben den Wandel entweder als Druck, ständig noch ein Tool lernen zu müssen, oder als diffuse Angst, mit der eigenen Rolle nicht mehr gebraucht zu werden. Beides erschwert klare Lernentscheidungen.'
     },
     {
@@ -915,7 +915,7 @@ export const CHALLENGE_CONTENT: ChallengeContent = {
   ],
   outcomes: [
     'welche Kompetenzen in realen Rollen an Gewicht gewinnen',
-    'wie aus FOMO und FOBO wieder Orientierung und Handlungsfähigkeit werden',
+    'wie aus Veränderungsdruck und Zukunftssorge wieder Orientierung und Handlungsfähigkeit werden',
     'wie Menschen mit KI sinnvoll arbeiten, ohne Spezialfall zu werden',
     'wie digitale Zusammenarbeit, Veränderungsfähigkeit und Urteilskraft aufgebaut werden'
   ]
