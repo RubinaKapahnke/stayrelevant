@@ -52,6 +52,9 @@ export class CtaSectionComponent {
   private readonly prefilledTopic =
     this.searchParams.get('anfrage') ??
     this.buildPrefilledTopic(this.prefilledRequestType, this.prefilledCourse);
+  private readonly prefilledMessage =
+    this.searchParams.get('nachricht') ??
+    this.buildPrefilledMessage(this.prefilledRequestType, this.prefilledCourse);
 
   protected readonly submitState = signal<'idle' | 'sending' | 'success' | 'error'>('idle');
   protected readonly responseMessage = signal('');
@@ -71,7 +74,7 @@ export class CtaSectionComponent {
     email: ['', [Validators.required, Validators.email, Validators.maxLength(160)]],
     phone: ['', [Validators.maxLength(40)]],
     organization: ['', [Validators.maxLength(160)]],
-    message: ['', [Validators.required, Validators.minLength(20), Validators.maxLength(4000)]],
+    message: [this.prefilledMessage, [Validators.required, Validators.minLength(20), Validators.maxLength(4000)]],
     consent: [false, [Validators.requiredTrue]],
     website: ['']
   });
@@ -114,7 +117,7 @@ export class CtaSectionComponent {
           email: '',
           phone: '',
           organization: '',
-          message: '',
+          message: this.prefilledMessage,
           consent: false,
           website: ''
         });
@@ -169,6 +172,14 @@ export class CtaSectionComponent {
 
     const option = INQUIRY_OPTIONS.find((entry) => entry.value === requestType);
     return option?.label ?? 'Beratung';
+  }
+
+  private buildPrefilledMessage(requestType: InquiryType, course: string): string {
+    if (requestType === 'kursanfrage' && course) {
+      return `Ich interessiere mich für den Kurs "${course}".`;
+    }
+
+    return '';
   }
 
   private syncCourseValidators(requestType: InquiryType): void {

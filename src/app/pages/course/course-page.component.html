@@ -23,9 +23,16 @@
               <a
                 mat-flat-button
                 class="sr-button sr-button-primary"
-                [href]="requestHref()"
+                [href]="emailRequestHref()"
               >
-                Kurs anfragen
+                Kurs via E-Mail anfragen
+              </a>
+              <a
+                mat-stroked-button
+                class="sr-button sr-button-secondary"
+                [href]="formRequestHref()"
+              >
+                Kurs via Kontaktformular anfragen
               </a>
               <a
                 mat-stroked-button
@@ -136,16 +143,16 @@
             <a
               mat-flat-button
               class="sr-button sr-button-primary"
-              [href]="requestHref()"
+              [href]="emailRequestHref()"
             >
-              Kurs anfragen
+              Kurs via E-Mail anfragen
             </a>
             <a
               mat-stroked-button
               class="sr-button sr-button-secondary"
-              [href]="requestHref()"
+              [href]="formRequestHref()"
             >
-              Kontakt aufnehmen
+              Kurs via Kontaktformular anfragen
             </a>
           </div>
         </div>

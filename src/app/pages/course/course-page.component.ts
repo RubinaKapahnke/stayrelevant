@@ -11,6 +11,7 @@ import {
   findCourseOfferBySlug
 } from '../../content/course-catalog-content';
 import { CourseLandingPageContent } from '../../content/course-landing-content';
+import { CONTACT_EMAIL } from '../../content/home-content';
 import { getCourseScheduleByTitle } from '../../content/course-schedule-content';
 import { PageShellComponent } from '../../shared/page-shell/page-shell.component';
 
@@ -90,10 +91,27 @@ export class CoursePageComponent {
     return [schedule.statusLabel ?? 'Coming soon'];
   });
 
-  protected readonly requestHref = computed(() => {
+  private readonly requestTopic = computed(() => {
+    const courseTitle = this.content()?.title ?? 'Weiterbildung bei Stay Relevant Academy';
+    return `Kursanfrage: ${courseTitle}`;
+  });
+
+  private readonly requestMessage = computed(() => {
+    const courseTitle = this.content()?.title ?? 'Weiterbildung bei Stay Relevant Academy';
+    return `Ich interessiere mich für den Kurs "${courseTitle}".`;
+  });
+
+  protected readonly emailRequestHref = computed(() => {
+    const subject = this.requestTopic();
+    const body = this.requestMessage();
+
+    return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+
+  protected readonly formRequestHref = computed(() => {
     const courseTitle = this.content()?.title ?? 'Weiterbildung bei Stay Relevant Academy';
 
-    return `/?art=kursanfrage&kurs=${encodeURIComponent(courseTitle)}&anfrage=${encodeURIComponent(`Kursanfrage: ${courseTitle}`)}#kontakt`;
+    return `/?art=kursanfrage&kurs=${encodeURIComponent(courseTitle)}&anfrage=${encodeURIComponent(this.requestTopic())}&nachricht=${encodeURIComponent(this.requestMessage())}#kontakt`;
   });
 
   constructor() {
