@@ -111,7 +111,7 @@ export class CoursePageComponent {
   protected readonly formRequestHref = computed(() => {
     const courseTitle = this.content()?.title ?? 'Weiterbildung bei Stay Relevant Academy';
 
-    return `/?art=kursanfrage&kurs=${encodeURIComponent(courseTitle)}&anfrage=${encodeURIComponent(this.requestTopic())}&nachricht=${encodeURIComponent(this.requestMessage())}#kontakt`;
+    return `/?art=kursanfrage&kurs=${encodeURIComponent(courseTitle)}&anfrage=${encodeURIComponent(this.requestTopic())}&nachricht=${encodeURIComponent(this.requestMessage())}#kontaktformular`;
   });
 
   constructor() {

@@ -62,7 +62,8 @@
       </div>
 
       <form
-        class="rounded-[1.9rem] border border-white/10 bg-white/[0.05] p-6 shadow-[0_24px_60px_rgba(5,12,24,0.24)] backdrop-blur sm:p-7"
+        id="kontaktformular"
+        class="sr-contact-form-target rounded-[1.9rem] border border-white/10 bg-white/[0.05] p-6 shadow-[0_24px_60px_rgba(5,12,24,0.24)] backdrop-blur sm:p-7"
         [formGroup]="contactForm"
         (ngSubmit)="submitForm()"
         novalidate
