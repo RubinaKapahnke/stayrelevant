@@ -96,9 +96,15 @@ export class CoursePageComponent {
     return `Kursanfrage: ${courseTitle}`;
   });
 
+  private readonly requestCourseUrl = computed(() => {
+    const slug = this.state().slug;
+
+    return slug ? `${this.document.location.origin}/kurse/${slug}` : this.document.location.origin;
+  });
+
   private readonly requestMessage = computed(() => {
     const courseTitle = this.content()?.title ?? 'Weiterbildung bei Stay Relevant Academy';
-    return `Ich interessiere mich für den Kurs "${courseTitle}".`;
+    return `Ich interessiere mich für den Kurs "${courseTitle}".\n\nLink zum Kurs: ${this.requestCourseUrl()}`;
   });
 
   protected readonly emailRequestHref = computed(() => {
